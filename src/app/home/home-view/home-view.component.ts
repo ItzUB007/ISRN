@@ -41,9 +41,19 @@ export class HomeViewComponent implements OnInit {
     alert('date click! ' + arg.dateStr)
   }
 
+  popUp:any;
+  org:any;
+  bene:any;
+  country:any;
+
+
+  cross(){
+    this.popUp?.classList.add('fadeout');
+  }
+
   ngOnInit(): void {
 
-    
+    this.popUp = document.querySelector('.popup_bg');
 
     const paths = document.querySelectorAll('path');
     paths.forEach(path => {
@@ -52,12 +62,21 @@ export class HomeViewComponent implements OnInit {
       });
     });
 
-    /*const path = document.querySelectorAll('path');
+    const path = document.querySelectorAll('path');
     path.forEach(path => {
       path.addEventListener('click', () => {
-        path.classList.add('zoom');
+        this.popUp.classList.remove('fadeout');
+        this.popUp.classList.add('fadein');
+
+        this.country = path.getAttribute('title');
+        //this.bene = path.getAttribute('bene')
+        this.bene = 17;
+        this.org = 90;
+
       });
-    });*/
+    });
+
+    
 
     
 

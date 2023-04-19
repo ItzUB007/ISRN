@@ -9,6 +9,9 @@ import { WhoWeAreComponent } from './who-we-are/who-we-are.component';
 import { WhatwedoComponent } from './whatwedo/whatwedo.component';
 import { EducationComponent } from './education/education.component';
 import { AgricultureComponent } from './agriculture/agriculture.component';
+import { HealthComponent } from './health/health.component';
+import { NGOClinicComponent } from './ngoclinic/ngoclinic.component';
+import { Covid19Component } from './covid19/covid19.component';
 
 
 
@@ -19,7 +22,10 @@ import { AgricultureComponent } from './agriculture/agriculture.component';
     WhoWeAreComponent,
     WhatwedoComponent,
     EducationComponent,
-    AgricultureComponent
+    AgricultureComponent,
+    HealthComponent,
+    NGOClinicComponent,
+    Covid19Component
   ],
   imports: [
     CommonModule,
