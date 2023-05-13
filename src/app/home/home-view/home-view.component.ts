@@ -31,10 +31,17 @@ export class HomeViewComponent implements OnInit {
       right: 'dayGridMonth,listWeek'},
     dateClick: this.handleDateClick.bind(this), // MUST ensure `this` context is maintained
     events: [
-      { title: 'event 1', date: '2023-05-01' },
-      { title: 'event 2', date: '2023-04-19' }
+      { title: 'event 1', date: '2023-04-01' },
+      { title: 'event 2', date: '2023-04-19' },
+      { title: 'event 3', date: '2023-04-03' },
+      { title: 'event 4', date: '2023-04-06' },
+      { title: 'event 5', date: '2023-04-24' },
+      { title: 'event 6', date: '2023-04-26' },
+      { title: 'event 7', date: '2023-06-02' },
+      { title: 'event 8', date: '2023-06-23' },
+      { title: 'event 9', date: '2023-06-24' },
     ],
-    eventColor: '#fc5e28'
+    eventColor: '#ffc107'
   };
 
   handleDateClick(arg:any) {

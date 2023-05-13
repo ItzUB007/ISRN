@@ -1,0 +1,156 @@
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../../../assets/images/Initiative.jpg');"
+  data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-end justify-content-start">
+      <div class="col-md-9 pb-5">
+        <p class="breadcrumbs"><span class="mr-2"><a href="">Home <i class="fa fa-chevron-right"></i></a></span>
+          <span>Knowledge Hub <i class="fa fa-chevron-right"></i></span>
+          <span> Publications <i class="fa fa-chevron-right"></i></span>
+        </p>
+        <h1 class="mb-3 bread">Publications</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section bg-half-light">
+  <div class="container">
+    <div class="row justify-content-center pb-2">
+      <div class="col-md-8 text-center heading-section   ">
+        <span class="subheading">Annual</span>
+        <h2 class="mb-4">Reports</h2>
+      </div>
+    </div>
+    <!--<p style="text-align: center;">Many research studies were undertaken on various thematic areas such as health,
+            education, environment
+            etc. with VOs,Corporates, Governments and other institutions.
+        </p>-->
+    <div class="row">
+
+      <div class="Allpdfs">
+          <div *ngFor="let item of this.pdfsAnnual; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
+                <div *ngIf="!this.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                  <div class="login-prompt-bg"></div>
+                  <p>Please log in to view more than 3 pages.</p> 
+                </div>
+                <div class="pdf-container">
+                  <pdf-viewer
+                    [src]="item.pdfSrc"
+                    [page]="1"
+                    [show-all]="true"
+                    (pagechanging)="onPageChange($event, item, i)"
+                    (after-load-complete)="onFileLoadComplete($event)"
+                    [rotation]="0"
+                    [original-size]="false"
+                    [fit-to-page]="false"
+                    [zoom]="1"
+                    [zoom-scale]="'page-width'"
+                    [stick-to-page]="false"
+                    [render-text]="true"
+                    [external-link-target]="'blank'"
+                    [autoresize]="true"
+                    [show-borders]="false"
+                    style="width: 100%; height: 450px;"
+                  ></pdf-viewer>
+                </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section bg-half-light">
+  <div class="container">
+    <div class="row justify-content-center pb-2">
+      <div class="col-md-8 text-center heading-section   ">
+        <span class="subheading">The</span>
+        <h2 class="mb-4">Newsletters</h2>
+      </div>
+    </div>
+    <!--<p style="text-align: center;">Many research studies were undertaken on various thematic areas such as health,
+            education, environment
+            etc. with VOs,Corporates, Governments and other institutions.
+        </p>-->
+    <div class="row">
+
+      <div class="Allpdfs">
+          <div *ngFor="let item of this.newsletter; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
+                <div *ngIf="!this.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                  <div class="login-prompt-bg"></div>
+                  <p>Please log in to view more than 3 pages.</p> 
+                </div>
+                <div class="pdf-container">
+                  <pdf-viewer
+                    [src]="item.pdfSrc"
+                    [page]="1"
+                    [show-all]="true"
+                    (pagechanging)="onPageChange($event, item, i+this.pdfsAnnual.length)"
+                    (after-load-complete)="onFileLoadComplete($event)"
+                    [rotation]="0"
+                    [original-size]="false"
+                    [fit-to-page]="false"
+                    [zoom]="1"
+                    [zoom-scale]="'page-width'"
+                    [stick-to-page]="false"
+                    [render-text]="true"
+                    [external-link-target]="'blank'"
+                    [autoresize]="true"
+                    [show-borders]="false"
+                    style="width: 100%; height: 450px;"
+                  ></pdf-viewer>
+                </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section bg-half-light">
+  <div class="container">
+    <div class="row justify-content-center pb-2">
+      <div class="col-md-8 text-center heading-section   ">
+        <span class="subheading">Compendium and</span>
+        <h2 class="mb-4">Reports</h2>
+      </div>
+    </div>
+    <!--<p style="text-align: center;">Many research studies were undertaken on various thematic areas such as health,
+            education, environment
+            etc. with VOs,Corporates, Governments and other institutions.
+        </p>-->
+    <div class="row">
+
+      <div class="Allpdfs">
+          <div *ngFor="let item of this.condenium; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
+                <div *ngIf="!this.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                  <div class="login-prompt-bg"></div>
+                  <p>Please log in to view more than 3 pages.</p> 
+                </div>
+                <div class="pdf-container">
+                  <pdf-viewer
+                    [src]="item.pdfSrc"
+                    [page]="1"
+                    [show-all]="true"
+                    (pagechanging)="onPageChange($event, item,  i+this.pdfsAnnual.length+this.newsletter.length)"
+                    (after-load-complete)="onFileLoadComplete($event)"
+                    [rotation]="0"
+                    [original-size]="false"
+                    [fit-to-page]="false"
+                    [zoom]="1"
+                    [zoom-scale]="'page-width'"
+                    [stick-to-page]="false"
+                    [render-text]="true"
+                    [external-link-target]="'blank'"
+                    [autoresize]="true"
+                    [show-borders]="false"
+                    style="width: 100%; height: 450px;"
+                  ></pdf-viewer>
+                </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>

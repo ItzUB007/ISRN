@@ -327,7 +327,17 @@ input:checked~.content-test {
 .content_testimonial-4 .picto {
   height: 100px;
   width: 100px;
-  background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+  background-image: url("../../../assets/images/Modi\ ji.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.content_testimonial-5 .picto {
+  height: 100px;
+  width: 100px;
+  background-image: url("../../../assets/images/Amit_Shah_AP.avif");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -365,6 +375,11 @@ input:checked~label.label_testimonial-3 {
 input:checked~label.label_testimonial-4 {
   color: #f27935;
   border-right: solid 4px #f27935;
+}
+
+input:checked~label.label_testimonial-5 {
+  color: #f27935;
+  border-right: solid 4px #d50000;
 }
 
 label.label_testimonial-1:before {
@@ -416,7 +431,21 @@ label.label_testimonial-4:before {
   width: 50px;
   height: 50px;
   margin-left: 15px;
-  background-image: url("https://i.postimg.cc/4Y3rypTz/ak-Pest-Control-Logo.jpg");
+  background-image: url("../../../assets/images/Modi\ ji.jpeg");
+  background-position: center;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+label.label_testimonial-5:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-left: 15px;
+  background-image: url("../../../assets/images/Amit_Shah_AP.avif");
   background-position: center;
   background-size: 75% 75%;
   background-repeat: no-repeat;
@@ -487,6 +516,21 @@ label:first-letter {
   transition: font-size 0.5s;
 }
 
+.label_testimonial-5:hover {
+  background-image: -webkit-gradient(linear,
+      left top,
+      right top,
+      from(#ffffff),
+      to(#f5d76e59));
+  background-image: -webkit-linear-gradient(left, #ffffff, #f5d76e59);
+  background-image: -o-linear-gradient(left, #ffffff, #f5d76e59);
+  background-image: linear-gradient(to right, #ffffff, #f5d76e59);
+  font-size: 1.2rem;
+  -webkit-transition: font-size 0.5s;
+  -o-transition: font-size 0.5s;
+  transition: font-size 0.5s;
+}
+
 p.testimonialState {
   margin-top: -5px;
   font-size: 0.8rem;
@@ -505,7 +549,9 @@ p.testimonialFrom {
 
 
 .threeButtons {
+  padding: 50px 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
   justify-content: center;
@@ -625,7 +671,7 @@ path {
 }
 
 path:hover {
-  fill: #d86d41;
+  fill: #ffc107;
   cursor: pointer;
 }
 
@@ -659,9 +705,7 @@ path:hover {
 }*/
 
 
-.zoom {
-  scale: 2;
-}
+
 
 
 .map_svg {
@@ -676,6 +720,16 @@ path:hover {
   }
 }
 
+@media screen and (max-width: 630px) {
+  .map_svg{
+    svg{
+      //transform: scale(0.75);
+      //height: 463.801186px;
+      //width: 407.90666px;
+    }
+  }
+}
+
 
 .popup_bg{
   position:fixed;
@@ -683,7 +737,7 @@ path:hover {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(253, 110, 0, 0.74);
+  background-color: #ffc107c7;
   z-index: 100;
   transition: all 1s;
 }
@@ -724,7 +778,7 @@ path:hover {
 
   a{
     position: fixed;
-    top: 0;
+    top: 80px;
     right: 0;
     width: 50px;
     height: 50px;
@@ -734,6 +788,7 @@ path:hover {
     }
   }
 }
+
 
 
 
@@ -757,6 +812,25 @@ full-calendar {
   //padding: 25px;
   overflow-y: scroll;
 }
+
+@media screen and (max-width: 700px) {
+  full-calendar {
+    width: 100%;
+  }
+  
+  .socialMedia {
+    width: 100%;
+    //padding: 25px;
+    overflow-y: scroll;
+  }
+
+  .calender-social{
+    flex-direction: row;
+  }
+}
+
+
+//////////////////////////////////
 
 .slider-text {
   position: absolute;
@@ -929,7 +1003,7 @@ $orange: hsl(50, 80%, 50%);
   padding: 0 2em;
 
   .button {
-    background: linear-gradient(135deg, adjust-hue(#fc5e28, -20deg), #fc5e28);
+    background: linear-gradient(135deg, adjust-hue(#ffc107, -20deg), #ffc107);
 
     &:before {
       box-shadow: 0 0 10px 10px rgba($primary, 0.25);
@@ -945,7 +1019,7 @@ $orange: hsl(50, 80%, 50%);
     transform: rotateY(180deg);
 
     .button {
-      background: linear-gradient(135deg, adjust-hue(#ff4000, -20deg), #ff4000);
+      background: linear-gradient(135deg, adjust-hue(#ecb100, -20deg), #ecb100);
 
       &:before {
         box-shadow: 0 0 10px 10px rgba($secondary, 0.25);

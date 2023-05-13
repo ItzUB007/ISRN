@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "indiansocialresponsibilitynet": {
+      "hosting": {
+        "ISRN": [
+          "indiansocialresponsibilitynet"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "indiansocialresponsibilitynet"
+  }
+}

@@ -9,7 +9,37 @@ export class LandingComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  navbar:any;
+  //navitem:any;
 
+  ngOnInit(): void {
+
+    this.navbar = document.querySelector('#ftco-navbar');
+    /*this.navitem = document.querySelectorAll('.nav-item');
+
+
+    this.navitem.forEach((element:any) => {
+      
+      element.addEventListener('click',()=>{
+        element.classList.add('active');
+      })
+
+    });*/
+
+
+    window.addEventListener("scroll", () => {
+      let currentScroll = window.scrollY;
+      if (currentScroll > 200) {
+        this.navbar?.classList.add('navbarOnTop');
+      }
+
+      if(currentScroll <= 200){
+        this.navbar?.classList.remove('navbarOnTop');
+      }
+
+
+    });
+
+
+  }
 }

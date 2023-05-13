@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
             <div class="col-md-9 pb-5">
-                <p class="breadcrumbs"><span class="mr-2"><a href="">Home <i
-                                class="fa fa-chevron-right"></i></a></span> <span>Who We Are <i
-                            class="fa fa-chevron-right"></i></span></p>
+                <p class="breadcrumbs"><span class="mr-2"><a href="">Home <i class="fa fa-chevron-right"></i></a></span>
+                    <span>Who We Are <i class="fa fa-chevron-right"></i></span>
+                </p>
                 <h1 class="mb-3 bread">Who We Are</h1>
             </div>
         </div>
@@ -117,23 +117,31 @@
 
 <section class="ftco-section bg-half-light">
     <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
+        <!--<div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section   ">
                 <span class="subheading">Governing</span>
                 <h2 class="mb-4">Board</h2>
             </div>
-        </div>
+        </div>-->
         <div class="row">
-            
-            <div class="people">
+
+            <div class="threeButtons">
+                <button (click)="this.getGoverning()" style="--clr:#fd7e14"><span>Governing board</span><i></i></button>
+                <button (click)="this.getAdvisory()" style="--clr:#ffc107"><span>Advisory Board</span><i></i></button>
+                <button (click)="this.getMeetOurTeam()" style="--clr:#dc3545"><span>Meet our team</span><i></i></button>
+            </div>
+
+            <div class="people governing">
 
                 <div class="wrap animate pop">
                     <div class="overlay">
                         <div class="overlay-content animate slide-left delay-2">
                             <h1 class="animate slide-left pop delay-4">Chairman</h1>
-                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Anil Khaitan - Industrialist & Management expert</p>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Anil
+                                Khaitan - Industrialist & Management expert</p>
                         </div>
-                        <div class="image-content animate slide delay-5"><img src="../../../assets/images/Anil Khaitan.jpg" alt=""></div>
+                        <div class="image-content animate slide delay-5"><img
+                                src="../../../assets/images/Anil Khaitan.jpg" alt=""></div>
                         <div class="dots animate">
                             <div class="dot animate slide-up delay-6"></div>
                             <div class="dot animate slide-up delay-7"></div>
@@ -141,25 +149,216 @@
                         </div>
                     </div>
                     <div class="text">
-                        <p>After attending Vincent High School in Mussoorie and completing his B.Com degree, Mr. Anil Khaitan, 
-                            Chairman of SNK Corp., joined his family's businesses in 1976. In 1981, he completed his MBA from 
-                            the International Management Institute in Geneva.  Mr. Khaitan served as the former president of the 
-                            Ph.D. Chamber of Commerce and Industry. He has established himself in the copper and steel, paper, 
-                            and jute industries, among others. In addition to his extensive experience in several industries, 
-                            he is a member of numerous National and International organisations, including the Advisory Council 
+                        <p>After attending Vincent High School in Mussoorie and completing his B.Com degree, Mr. Anil
+                            Khaitan,
+                            Chairman of SNK Corp., joined his family's businesses in 1976. In 1981, he completed his MBA
+                            from
+                            the International Management Institute in Geneva. Mr. Khaitan served as the former president
+                            of the
+                            Ph.D. Chamber of Commerce and Industry. He has established himself in the copper and steel,
+                            paper,
+                            and jute industries, among others. In addition to his extensive experience in several
+                            industries,
+                            he is a member of numerous National and International organisations, including the Advisory
+                            Council
                             of the Indian Institute of Finance, AIMA, and the International Chamber of Commerce India.
                         </p>
-                        
+
                     </div>
                 </div>
-            
-            
-                
-            
+
+                <div class="wrap animate pop">
+                    <div class="overlay">
+                        <div class="overlay-content animate slide-left delay-2">
+                            <h1 class="animate slide-left pop delay-4">Chairman</h1>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Anil
+                                Khaitan - Industrialist & Management expert</p>
+                        </div>
+                        <div class="image-content animate slide delay-5"><img
+                                src="../../../assets/images/Anil Khaitan.jpg" alt=""></div>
+                        <div class="dots animate">
+                            <div class="dot animate slide-up delay-6"></div>
+                            <div class="dot animate slide-up delay-7"></div>
+                            <div class="dot animate slide-up delay-8"></div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>After attending Vincent High School in Mussoorie and completing his B.Com degree, Mr. Anil
+                            Khaitan,
+                            Chairman of SNK Corp., joined his family's businesses in 1976. In 1981, he completed his MBA
+                            from
+                            the International Management Institute in Geneva. Mr. Khaitan served as the former president
+                            of the
+                            Ph.D. Chamber of Commerce and Industry. He has established himself in the copper and steel,
+                            paper,
+                            and jute industries, among others. In addition to his extensive experience in several
+                            industries,
+                            he is a member of numerous National and International organisations, including the Advisory
+                            Council
+                            of the Indian Institute of Finance, AIMA, and the International Chamber of Commerce India.
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
             </div>
-            
-            
+
+            <!--------------------------Advisory Board------------------------------------------->
+
+            <div class="people advisory hide">
+
+                <div class="wrap animate pop">
+                    <div class="overlay">
+                        <div class="overlay-content animate slide-left delay-2">
+                            <h1 class="animate slide-left pop delay-4"></h1>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">CA
+                                Jitender Singh</p>
+                        </div>
+                        <div class="image-content animate slide delay-5"><img
+                                src="../../../assets/images/Advisory/Jitender_Website.png" alt=""></div>
+                        <div class="dots animate">
+                            <div class="dot animate slide-up delay-6"></div>
+                            <div class="dot animate slide-up delay-7"></div>
+                            <div class="dot animate slide-up delay-8"></div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Mr. CA Jitender Singh became a Chartered Accountant in May 2010. He is also a concurrent
+                            audit certificate holder from the Institute of Chartered Accountants of India. He has done
+                            LLB from Agra University in 2016. He is adept in preparing & maintaining Statutory Books of
+                            Accounts, tax plans in compliance with Statutory Tax Acts. He also handles scrutiny and
+                            survey cases under the Income Tax Act. He is also proficient in the preparation of MIS
+                            reports and analyzing the same to provide feedback to the top management on business
+                            performance, monthly turnover, profitability, Revenue, Opex, and Capex.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="wrap animate pop">
+                    <div class="overlay">
+                        <div class="overlay-content animate slide-left delay-2">
+                            <h1 class="animate slide-left pop delay-4"></h1>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">CA
+                                Jitender Singh</p>
+                        </div>
+                        <div class="image-content animate slide delay-5"><img
+                                src="../../../assets/images/Advisory/Jitender_Website.png" alt=""></div>
+                        <div class="dots animate">
+                            <div class="dot animate slide-up delay-6"></div>
+                            <div class="dot animate slide-up delay-7"></div>
+                            <div class="dot animate slide-up delay-8"></div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Mr. CA Jitender Singh became a Chartered Accountant in May 2010. He is also a concurrent
+                            audit certificate holder from the Institute of Chartered Accountants of India. He has done
+                            LLB from Agra University in 2016. He is adept in preparing & maintaining Statutory Books of
+                            Accounts, tax plans in compliance with Statutory Tax Acts. He also handles scrutiny and
+                            survey cases under the Income Tax Act. He is also proficient in the preparation of MIS
+                            reports and analyzing the same to provide feedback to the top management on business
+                            performance, monthly turnover, profitability, Revenue, Opex, and Capex.
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+            <!--------------------------Meet our team------------------------------------------->
+
+            <div class="people meetourteam hide">
+
+                <div class="wrap animate pop">
+                    <div class="overlay">
+                        <div class="overlay-content animate slide-left delay-2">
+                            <h1 class="animate slide-left pop delay-4">Chief Executive Officer</h1>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">
+                                Santosh Gupta, CEO, ISRN</p>
+                        </div>
+                        <div class="image-content animate slide delay-5"><img
+                                src="../../../assets/images/Meet Our Team/Santosh_Gupta.png" alt=""></div>
+                        <div class="dots animate">
+                            <div class="dot animate slide-up delay-6"></div>
+                            <div class="dot animate slide-up delay-7"></div>
+                            <div class="dot animate slide-up delay-8"></div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Mr. Santosh is serving as the CEO & Founder Trustee of the ISRN. His expertise lies in
+                            Disaster Management, and Corporate Social Responsibility (CSR), and Sustainable Development
+                            & Management, Organizational Development, Result Based Management and Quality Assurance of
+                            Program Delivery. Formerly, he was associated with the Ministry of Home Affairs, GOI and
+                            also with several International organizations such as, UNDP, UNICEF, and also National
+                            institutions, DDMA, Govt. of NCT of Delhi, and NIDM in different leadership positions.
+                            <br>
+                            He is now serving as a member of Expert Appraisal Committee (Non-Coal Mining), Ministry of
+                            Environment, Forest and Climate Change, GOI, and member of the State level Vigilance &
+                            Monitoring Committee for the State of Uttar Pradesh, Ministry of Rural Development, GOI. His
+                            more than two decades of enriching experience has been playing a key role for the success of
+                            Indian Social Responsibility Network.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="wrap animate pop">
+                    <div class="overlay">
+                        <div class="overlay-content animate slide-left delay-2">
+                            <h1 class="animate slide-left pop delay-4">Chief Executive Officer</h1>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">
+                                Santosh Gupta, CEO, ISRN</p>
+                        </div>
+                        <div class="image-content animate slide delay-5"><img
+                                src="../../../assets/images/Meet Our Team/Santosh_Gupta.png" alt=""></div>
+                        <div class="dots animate">
+                            <div class="dot animate slide-up delay-6"></div>
+                            <div class="dot animate slide-up delay-7"></div>
+                            <div class="dot animate slide-up delay-8"></div>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Mr. Santosh is serving as the CEO & Founder Trustee of the ISRN. His expertise lies in
+                            Disaster Management, and Corporate Social Responsibility (CSR), and Sustainable Development
+                            & Management, Organizational Development, Result Based Management and Quality Assurance of
+                            Program Delivery. Formerly, he was associated with the Ministry of Home Affairs, GOI and
+                            also with several International organizations such as, UNDP, UNICEF, and also National
+                            institutions, DDMA, Govt. of NCT of Delhi, and NIDM in different leadership positions.
+                            <br>
+                            He is now serving as a member of Expert Appraisal Committee (Non-Coal Mining), Ministry of
+                            Environment, Forest and Climate Change, GOI, and member of the State level Vigilance &
+                            Monitoring Committee for the State of Uttar Pradesh, Ministry of Rural Development, GOI. His
+                            more than two decades of enriching experience has been playing a key role for the success of
+                            Indian Social Responsibility Network.
+                        </p>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
         </div>
     </div>
 </section>
-
