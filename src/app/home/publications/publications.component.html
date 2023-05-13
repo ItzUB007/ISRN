@@ -30,7 +30,7 @@
 
       <div class="Allpdfs">
           <div *ngFor="let item of this.pdfsAnnual; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
-                <div *ngIf="!this.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                <div *ngIf="!this.authService.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
                   <div class="login-prompt-bg"></div>
                   <p>Please log in to view more than 3 pages.</p> 
                 </div>
@@ -77,7 +77,7 @@
 
       <div class="Allpdfs">
           <div *ngFor="let item of this.newsletter; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
-                <div *ngIf="!this.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                <div *ngIf="!this.authService.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
                   <div class="login-prompt-bg"></div>
                   <p>Please log in to view more than 3 pages.</p> 
                 </div>
@@ -124,7 +124,7 @@
 
       <div class="Allpdfs">
           <div *ngFor="let item of this.condenium; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
-                <div *ngIf="!this.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                <div *ngIf="!this.authService.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
                   <div class="login-prompt-bg"></div>
                   <p>Please log in to view more than 3 pages.</p> 
                 </div>

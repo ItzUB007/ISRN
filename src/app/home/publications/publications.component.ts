@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { PDFProgressData, PDFDocumentProxy, PdfViewerComponent } from 'ng2-pdf-viewer';
+import { AuthService } from '../../Services/auth.service';
 
 @Component({
   selector: 'app-publications',
@@ -8,7 +9,7 @@ import { PDFProgressData, PDFDocumentProxy, PdfViewerComponent } from 'ng2-pdf-v
 })
 export class PublicationsComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef, public authService: AuthService) { }
 
 
   public isLoggedIn = false;
@@ -82,7 +83,7 @@ export class PublicationsComponent implements OnInit {
     source.currentPage = event?.pageNumber;
     console.log(source.currentPage)
     console.log(index)
-    if (source.currentPage > 3 && !this.isLoggedIn) {
+    if (source.currentPage > 3 && !this.authService.isLoggedIn) {
       // display a prompt to log in
       this.pdfViewerDiv[index].classList.add('blur')
       this.maxPages = 3;
