@@ -17,14 +17,17 @@
                     </p>
                 </div>
             </div>
-            <div class="col-sm text-center text-md-left mb-md-0 mb-2 pr-md-4 d-flex topper align-items-center">
+            <!--<div class="col-sm text-center text-md-left mb-md-0 mb-2 pr-md-4 d-flex topper align-items-center">
                 <p class="mb-0 w-100">
                     <span class="fa fa-phone-square"></span>
                     <span class="text">+91 934 456 7891</span>
                 </p>
+            </div>-->
+            <div class="col d-flex topper align-items-center text-lg-right justify-content-end">
+                <p class="mb-0 "><a href="#" class="btn btn-dark" href="/sign-in">Sign-In</a></p>
             </div>
-            <!--<div class="col-sm-12 col-md-6 col-lg-7 d-flex topper align-items-center text-lg-right justify-content-end">
-                <p class="mb-0 register-link"><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Donate Now</a></p>
+            <!--<div class="col d-flex topper align-items-center text-lg-right justify-content-end">
+                <p class="mb-0 register-link"><a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" href="/sign-in">Login</a></p>
             </div>-->
         </div>
     </div>
@@ -32,7 +35,7 @@
 <div class="d-flex align-items-center justify-content-center pt-4 pb-4">
     <a class="navbar-brand d-flex align-items-center" href="">
         <span class="flaticon"><img class="isrnLogo" src="../../../assets/images/ISRN Logo.png" alt="Logo"></span>
-        <span class="ml-2">Indian Social Responsibility Network<small>Tagline</small></span>
+        <span class="ml-2">Indian Social Responsibility Network<small>Relationship Building Beyond Funding</small></span>
     </a>
 </div>
 
@@ -68,40 +71,51 @@
 
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light justify-content-center" id="ftco-navbar" style="overflow: visible;">
-    <div class="d-flex align-items-center" style="background-color: black;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light justify-content-center" id="ftco-navbar" style="overflow: visible; background-color: rgb(255, 255, 255);">
+    <div class="d-flex align-items-center" style="background-color: rgb(255, 255, 255);">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="fa fa-bars"></span> Menu
         </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active"><a href="" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="whoweare" class="nav-link">Who We Are</a></li>
+                <li class="nav-item"><a routerLink="whoweare" class="nav-link">Who We Are</a></li>
                 <li class="nav-item"><a href="whatwedo" class="nav-link">What We Do</a></li>
+                <!--<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        What We Do
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" routerLink="whatwedo">What We Do</a></li>
+                      <li><a class="dropdown-item" routerLink="whatwedo-training">Training Programs</a></li>
+                    </ul>
+                  </li>-->
+                  <li class="nav-item"><a routerLink="c20" class="nav-link">C20</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Covid 19
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="covid19">Covid 19</a></li>
-                      <li><a class="dropdown-item" href="covid19-initiatives">ISRN Initiatives</a></li>
+                      <li><a class="dropdown-item" routerLink="covid19">Covid 19</a></li>
+                      <li><a class="dropdown-item" routerLink="covid19-initiatives">ISRN Initiatives</a></li>
+                      <li><a class="dropdown-item" routerLink="covid19-mirte">M-RITE</a></li>
                     </ul>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" routerLink="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Knowledge Hub
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="knowledge-csr">CSR</a></li>
-                      <li><a class="dropdown-item" href="knowledge-publications">Publications</a></li>
-                      <li><a class="dropdown-item" href="knowledge-antyodaya">Antyodaya</a></li>
-                      <li><a class="dropdown-item" href="covid19-initiatives">Blogs</a></li>
+                      <li><a class="dropdown-item" routerLink="knowledge-csr">CSR</a></li>
+                      <li><a class="dropdown-item" routerLink="knowledge-publications">Publications</a></li>
+                      <li><a class="dropdown-item" routerLink="knowledge-antyodaya">Antyodaya</a></li>
+                      <li><a class="dropdown-item" routerLink="covid19-initiatives">Blogs</a></li>
                     </ul>
                   </li>
-                <li class="nav-item"><a href="getinvolved" class="nav-link">Get Involved</a></li>
-                <li class="nav-item"><a href="donate" class="nav-link">Donate</a></li>
-                <li class="nav-item"><a href="membership" class="nav-link">Membership</a></li>
-                <li class="nav-item"><a href="contact" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a routerLink="getinvolved" class="nav-link">Get Involved</a></li>
+                <li class="nav-item"><a routerLink="donate" class="nav-link">Donate</a></li>
+                <li class="nav-item"><a routerLink="membership" class="nav-link">Membership</a></li>
+                <li class="nav-item"><a routerLink="contact" class="nav-link">Contact Us</a></li>
             </ul>
             <!--<a href="#" class="btn-custom" data-toggle="modal" data-target="#exampleModalCenter">Donate Now</a>-->
         </div>
@@ -164,12 +178,10 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="fa fa-map-marker mr-3"></span><span class="text">203 Fake St. Mountain
-                                    View, San Francisco, California, USA</span></li>
-                            <li><a href="#"><span class="fa fa-phone mr-3"></span><span class="text">+2 392 3929
-                                        210</span></a></li>
+                            <li><span class="fa fa-map-marker mr-3"></span><span class="text">K-13, First floor, South Extension- II, New Delhi -110049</span></li>
+                            <li><a href="#"><span class="fa fa-phone mr-3"></span><span class="text">+91-9999109271, 011-4104 5160</span></a></li>
                             <li><a href="#"><span class="fa fa-paper-plane mr-3"></span><span
-                                        class="text">info@yourdomain.com</span></a></li>
+                                        class="text">info@isrn.in</span></a></li>
                         </ul>
                     </div>
                 </div>

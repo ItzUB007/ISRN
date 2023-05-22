@@ -29,6 +29,7 @@
     <div class="row">
 
       <div class="Allpdfs">
+        
           <div *ngFor="let item of this.pdfsAnnual; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
                 <div *ngIf="!this.authService.isLoggedIn && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
                   <div class="login-prompt-bg"></div>
@@ -36,7 +37,7 @@
                 </div>
                 <div class="pdf-container">
                   <pdf-viewer
-                    [src]="item.pdfSrc"
+                    [src]="item.PDFLink"
                     [page]="1"
                     [show-all]="true"
                     (pagechanging)="onPageChange($event, item, i)"
@@ -83,7 +84,7 @@
                 </div>
                 <div class="pdf-container">
                   <pdf-viewer
-                    [src]="item.pdfSrc"
+                    [src]="item.PDFLink"
                     [page]="1"
                     [show-all]="true"
                     (pagechanging)="onPageChange($event, item, i+this.pdfsAnnual.length)"
@@ -130,7 +131,7 @@
                 </div>
                 <div class="pdf-container">
                   <pdf-viewer
-                    [src]="item.pdfSrc"
+                    [src]="item.PDFLink"
                     [page]="1"
                     [show-all]="true"
                     (pagechanging)="onPageChange($event, item,  i+this.pdfsAnnual.length+this.newsletter.length)"

@@ -1,6 +1,10 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { PDFProgressData, PDFDocumentProxy, PdfViewerComponent } from 'ng2-pdf-viewer';
 import { AuthService } from '../../Services/auth.service';
+import { DbService } from '../../Services/db.service';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+
+
 
 @Component({
   selector: 'app-publications',
@@ -9,7 +13,7 @@ import { AuthService } from '../../Services/auth.service';
 })
 export class PublicationsComponent implements OnInit {
 
-  constructor(private elementRef: ElementRef, public authService: AuthService) { }
+  constructor(private elementRef: ElementRef, public authService: AuthService, private db:DbService, private storage:AngularFireStorage) { }
 
 
   public isLoggedIn = false;
@@ -18,9 +22,9 @@ export class PublicationsComponent implements OnInit {
   public currentPage = 1;
   public maxPages = 3
   pdfViewerDiv:any;
-
-  pdfsAnnual = [
-    {
+  
+  pdfsAnnual:any = [
+    /*{
       pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
       currentPage: 1
     },
@@ -31,28 +35,12 @@ export class PublicationsComponent implements OnInit {
     {
       pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
       currentPage: 1
-    }
-
-  ]
-
-  newsletter = [
-    {
-      pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
-      currentPage: 1
-    },
-    {
-      pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
-      currentPage: 1
-    },
-    {
-      pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
-      currentPage: 1
-    }
+    }*/
 
   ]
 
-  condenium = [
-    {
+  newsletter:any = [
+  /*{
       pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
       currentPage: 1
     },
@@ -63,13 +51,64 @@ export class PublicationsComponent implements OnInit {
     {
       pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
       currentPage: 1
-    }
+    }*/
+
+  ]
+
+  condenium:any = [
+    /*{
+      pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
+      currentPage: 1
+    },
+    {
+      pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
+      currentPage: 1
+    },
+    {
+      pdfSrc: '../../assets/CSR PDFs/CompaniesAct2013.pdf',
+      currentPage: 1
+    }*/
 
   ]
 
   ngOnInit(): void {
 
     //this.pdfViewerDiv = document.querySelectorAll('.pdf-container');
+
+    this.db.getAnnualReports().subscribe((data:any)=>{
+      this.pdfsAnnual = data;
+      this.pdfsAnnual.forEach((data:any)=>{
+        data.currentPage = 1;
+      })
+      console.log(this.pdfsAnnual);
+
+    })
+
+    this.db.getNewsletters().subscribe((data:any)=>{
+      this.newsletter = data;
+
+      this.newsletter.forEach((data:any)=>{
+        data.currentPage = 1;
+      })
+      console.log(this.newsletter);
+    })
+
+    this.db.getCompendium().subscribe((data:any)=>{
+      this.condenium = data;
+      this.condenium.forEach((data:any)=>{
+        data.currentPage = 1;
+      })
+      console.log(this.condenium);
+    })
+
+
+    
+    
+    
+
+    
+
+    
 
   }
 

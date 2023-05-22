@@ -1,4 +1,4 @@
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../../../assets/images/Modi\ ji.jpeg');"
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../../../assets/images/whowearebg.JPG');"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 d-flex align-items-stretch">
-                <div class="about-wrap img w-100" style="background-image: url(../../../assets/images/about.jpg);">
+                <div class="about-wrap img w-100" style="background-image: url(../../../assets/images/ISRN_Brochure\ \(2\)-1.png);">
                 </div>
             </div>
             <div class="col-md-6 py-5 pl-md-5">
@@ -131,17 +131,20 @@
                 <button (click)="this.getMeetOurTeam()" style="--clr:#dc3545"><span>Meet our team</span><i></i></button>
             </div>
 
-            <div class="people governing">
+            <div class="governing">
 
-                <div class="wrap animate pop">
+                <h1 style="text-align: center; font-weight: 700;">Governing Board</h1>
+
+                <div class="people"> 
+
+                <div class="wrap animate pop" *ngFor="let member of this.governBoardMember">
                     <div class="overlay">
                         <div class="overlay-content animate slide-left delay-2">
-                            <h1 class="animate slide-left pop delay-4">Chairman</h1>
-                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Anil
-                                Khaitan - Industrialist & Management expert</p>
+                            <h1 class="animate slide-left pop delay-4">{{member.Name}}</h1>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">{{member.Designation}}</p>
                         </div>
                         <div class="image-content animate slide delay-5"><img
-                                src="../../../assets/images/Anil Khaitan.jpg" alt=""></div>
+                                [src]="member.ImageLink" alt=""></div>
                         <div class="dots animate">
                             <div class="dot animate slide-up delay-6"></div>
                             <div class="dot animate slide-up delay-7"></div>
@@ -149,58 +152,15 @@
                         </div>
                     </div>
                     <div class="text">
-                        <p>After attending Vincent High School in Mussoorie and completing his B.Com degree, Mr. Anil
-                            Khaitan,
-                            Chairman of SNK Corp., joined his family's businesses in 1976. In 1981, he completed his MBA
-                            from
-                            the International Management Institute in Geneva. Mr. Khaitan served as the former president
-                            of the
-                            Ph.D. Chamber of Commerce and Industry. He has established himself in the copper and steel,
-                            paper,
-                            and jute industries, among others. In addition to his extensive experience in several
-                            industries,
-                            he is a member of numerous National and International organisations, including the Advisory
-                            Council
-                            of the Indian Institute of Finance, AIMA, and the International Chamber of Commerce India.
-                        </p>
+                        <p>{{member.Content}}</p>
 
                     </div>
                 </div>
 
-                <div class="wrap animate pop">
-                    <div class="overlay">
-                        <div class="overlay-content animate slide-left delay-2">
-                            <h1 class="animate slide-left pop delay-4">Chairman</h1>
-                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">Anil
-                                Khaitan - Industrialist & Management expert</p>
-                        </div>
-                        <div class="image-content animate slide delay-5"><img
-                                src="../../../assets/images/Anil Khaitan.jpg" alt=""></div>
-                        <div class="dots animate">
-                            <div class="dot animate slide-up delay-6"></div>
-                            <div class="dot animate slide-up delay-7"></div>
-                            <div class="dot animate slide-up delay-8"></div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <p>After attending Vincent High School in Mussoorie and completing his B.Com degree, Mr. Anil
-                            Khaitan,
-                            Chairman of SNK Corp., joined his family's businesses in 1976. In 1981, he completed his MBA
-                            from
-                            the International Management Institute in Geneva. Mr. Khaitan served as the former president
-                            of the
-                            Ph.D. Chamber of Commerce and Industry. He has established himself in the copper and steel,
-                            paper,
-                            and jute industries, among others. In addition to his extensive experience in several
-                            industries,
-                            he is a member of numerous National and International organisations, including the Advisory
-                            Council
-                            of the Indian Institute of Finance, AIMA, and the International Chamber of Commerce India.
-                        </p>
+               
 
-                    </div>
-                </div>
 
+            </div>
 
 
 
@@ -211,17 +171,21 @@
 
             <!--------------------------Advisory Board------------------------------------------->
 
-            <div class="people advisory hide">
+            <div class="advisory hide">
 
-                <div class="wrap animate pop">
+                <h1 style="text-align: center; font-weight: 700;">Advisory Board</h1>
+
+
+                <div class="people"> 
+
+                <div class="wrap animate pop" *ngFor="let member of this.advisoryBoardMamber">
                     <div class="overlay">
                         <div class="overlay-content animate slide-left delay-2">
-                            <h1 class="animate slide-left pop delay-4"></h1>
-                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">CA
-                                Jitender Singh</p>
+                            <h1 class="animate slide-left pop delay-4">{{member.Name}}</h1>
+                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">{{member.Designation}}</p>
                         </div>
                         <div class="image-content animate slide delay-5"><img
-                                src="../../../assets/images/Advisory/Jitender_Website.png" alt=""></div>
+                                [src]="member.ImageLink" alt=""></div>
                         <div class="dots animate">
                             <div class="dot animate slide-up delay-6"></div>
                             <div class="dot animate slide-up delay-7"></div>
@@ -229,46 +193,10 @@
                         </div>
                     </div>
                     <div class="text">
-                        <p>Mr. CA Jitender Singh became a Chartered Accountant in May 2010. He is also a concurrent
-                            audit certificate holder from the Institute of Chartered Accountants of India. He has done
-                            LLB from Agra University in 2016. He is adept in preparing & maintaining Statutory Books of
-                            Accounts, tax plans in compliance with Statutory Tax Acts. He also handles scrutiny and
-                            survey cases under the Income Tax Act. He is also proficient in the preparation of MIS
-                            reports and analyzing the same to provide feedback to the top management on business
-                            performance, monthly turnover, profitability, Revenue, Opex, and Capex.
-                        </p>
-
+                        <p>{{member.Content}}</p>
                     </div>
                 </div>
-
-                <div class="wrap animate pop">
-                    <div class="overlay">
-                        <div class="overlay-content animate slide-left delay-2">
-                            <h1 class="animate slide-left pop delay-4"></h1>
-                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">CA
-                                Jitender Singh</p>
-                        </div>
-                        <div class="image-content animate slide delay-5"><img
-                                src="../../../assets/images/Advisory/Jitender_Website.png" alt=""></div>
-                        <div class="dots animate">
-                            <div class="dot animate slide-up delay-6"></div>
-                            <div class="dot animate slide-up delay-7"></div>
-                            <div class="dot animate slide-up delay-8"></div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <p>Mr. CA Jitender Singh became a Chartered Accountant in May 2010. He is also a concurrent
-                            audit certificate holder from the Institute of Chartered Accountants of India. He has done
-                            LLB from Agra University in 2016. He is adept in preparing & maintaining Statutory Books of
-                            Accounts, tax plans in compliance with Statutory Tax Acts. He also handles scrutiny and
-                            survey cases under the Income Tax Act. He is also proficient in the preparation of MIS
-                            reports and analyzing the same to provide feedback to the top management on business
-                            performance, monthly turnover, profitability, Revenue, Opex, and Capex.
-                        </p>
-
-                    </div>
                 </div>
-
 
 
 
@@ -282,77 +210,36 @@
 
             <!--------------------------Meet our team------------------------------------------->
 
-            <div class="people meetourteam hide">
+            <div class="meetourteam hide">
 
-                <div class="wrap animate pop">
-                    <div class="overlay">
-                        <div class="overlay-content animate slide-left delay-2">
-                            <h1 class="animate slide-left pop delay-4">Chief Executive Officer</h1>
-                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">
-                                Santosh Gupta, CEO, ISRN</p>
-                        </div>
-                        <div class="image-content animate slide delay-5"><img
-                                src="../../../assets/images/Meet Our Team/Santosh_Gupta.png" alt=""></div>
-                        <div class="dots animate">
-                            <div class="dot animate slide-up delay-6"></div>
-                            <div class="dot animate slide-up delay-7"></div>
-                            <div class="dot animate slide-up delay-8"></div>
-                        </div>
-                    </div>
-                    <div class="text">
-                        <p>Mr. Santosh is serving as the CEO & Founder Trustee of the ISRN. His expertise lies in
-                            Disaster Management, and Corporate Social Responsibility (CSR), and Sustainable Development
-                            & Management, Organizational Development, Result Based Management and Quality Assurance of
-                            Program Delivery. Formerly, he was associated with the Ministry of Home Affairs, GOI and
-                            also with several International organizations such as, UNDP, UNICEF, and also National
-                            institutions, DDMA, Govt. of NCT of Delhi, and NIDM in different leadership positions.
-                            <br>
-                            He is now serving as a member of Expert Appraisal Committee (Non-Coal Mining), Ministry of
-                            Environment, Forest and Climate Change, GOI, and member of the State level Vigilance &
-                            Monitoring Committee for the State of Uttar Pradesh, Ministry of Rural Development, GOI. His
-                            more than two decades of enriching experience has been playing a key role for the success of
-                            Indian Social Responsibility Network.
-                        </p>
+                <h1 style="text-align: center; font-weight: 700;">Meet Our Team</h1>
 
-                    </div>
-                </div>
+                <div class="people"> 
 
-                <div class="wrap animate pop">
-                    <div class="overlay">
-                        <div class="overlay-content animate slide-left delay-2">
-                            <h1 class="animate slide-left pop delay-4">Chief Executive Officer</h1>
-                            <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">
-                                Santosh Gupta, CEO, ISRN</p>
+                
+
+                    <div class="wrap animate pop" *ngFor="let member of this.MeetOurTeamMember">
+                        <div class="overlay">
+                            <div class="overlay-content animate slide-left delay-2">
+                                <h1 class="animate slide-left pop delay-4">{{member.Name}}</h1>
+                                <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">{{member.Designation}}</p>
+                            </div>
+                            <div class="image-content animate slide delay-5"><img
+                                    [src]="member.ImageLink" alt=""></div>
+                            <div class="dots animate">
+                                <div class="dot animate slide-up delay-6"></div>
+                                <div class="dot animate slide-up delay-7"></div>
+                                <div class="dot animate slide-up delay-8"></div>
+                            </div>
                         </div>
-                        <div class="image-content animate slide delay-5"><img
-                                src="../../../assets/images/Meet Our Team/Santosh_Gupta.png" alt=""></div>
-                        <div class="dots animate">
-                            <div class="dot animate slide-up delay-6"></div>
-                            <div class="dot animate slide-up delay-7"></div>
-                            <div class="dot animate slide-up delay-8"></div>
+                        <div class="text">
+                            <p>{{member.Content}}</p>
                         </div>
                     </div>
-                    <div class="text">
-                        <p>Mr. Santosh is serving as the CEO & Founder Trustee of the ISRN. His expertise lies in
-                            Disaster Management, and Corporate Social Responsibility (CSR), and Sustainable Development
-                            & Management, Organizational Development, Result Based Management and Quality Assurance of
-                            Program Delivery. Formerly, he was associated with the Ministry of Home Affairs, GOI and
-                            also with several International organizations such as, UNDP, UNICEF, and also National
-                            institutions, DDMA, Govt. of NCT of Delhi, and NIDM in different leadership positions.
-                            <br>
-                            He is now serving as a member of Expert Appraisal Committee (Non-Coal Mining), Ministry of
-                            Environment, Forest and Climate Change, GOI, and member of the State level Vigilance &
-                            Monitoring Committee for the State of Uttar Pradesh, Ministry of Rural Development, GOI. His
-                            more than two decades of enriching experience has been playing a key role for the success of
-                            Indian Social Responsibility Network.
-                        </p>
-
-                    </div>
-                </div>
 
 
 
-
+            </div>
 
 
 

@@ -17,6 +17,11 @@ import { MembershipComponent } from './membership/membership.component';
 import { ContactComponent } from './contact/contact.component';
 import { PublicationsComponent } from './publications/publications.component';
 import { AntyodayaComponent } from './antyodaya/antyodaya.component';
+import { WhatwedoTrainingProgramsComponent } from './whatwedo-training-programs/whatwedo-training-programs.component';
+import { C20Component } from './c20/c20.component';
+import { AdvocacyComponent } from './advocacy/advocacy.component';
+import { MIRTEComponent } from './mirte/mirte.component';
+import { MembersDirectoryComponent } from './members-directory/members-directory.component';
 
 
 const routes: Routes = [
@@ -25,6 +30,7 @@ const routes: Routes = [
     children: [
       { path: "", component: HomeViewComponent},
       { path: "whoweare", component: WhoWeAreComponent},
+      { path: "c20", component: C20Component},
       { path: "whatwedo", component: WhatwedoComponent},
       { path: "whatwedo-education", component: EducationComponent},
       { path: "whatwedo-agriculture", component: AgricultureComponent},
@@ -39,6 +45,10 @@ const routes: Routes = [
       { path: "contact", component: ContactComponent},
       { path: "knowledge-publications", component: PublicationsComponent},
       { path: "knowledge-antyodaya", component: AntyodayaComponent},
+      { path: "whatwedo-training", component:WhatwedoTrainingProgramsComponent },
+      { path: "whatwedo-advocacy", component:AdvocacyComponent },
+      { path: "covid19-mirte", component:MIRTEComponent },
+      { path: "membersdirectory", component:MembersDirectoryComponent }
     ]
   },
   

@@ -1,0 +1,78 @@
+<section class="hero-wrap hero-wrap-2"
+    style="background-image: url('../../../assets/images/whatwedobg.JPG'); background-size: cover;"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-9 pb-5">
+                <p class="breadcrumbs"><span class="mr-2"><a href="">Home <i class="fa fa-chevron-right"></i></a></span>
+                    <span>What We Do <i class="fa fa-chevron-right"></i></span>
+                    <span> Training Programs <i class="fa fa-chevron-right"></i></span>
+                </p>
+                <h1 class="mb-3 bread">Training Programs</h1>
+            </div>
+        </div>
+    </div>
+</section>
+    <!--<h1 class="tp_head">Training Programs</h1>-->
+
+
+<!--<section class="dark trainingprograms">
+
+
+    <div class="container py-4">
+        <div>
+            <article class="postcard dark blue" *ngFor="let item of this.trainingProgram">
+                <a class="postcard__img_link">
+                    <img [src]="item.ImageLink" class="postcard__img" alt="Image Title" />
+                </a>
+                <div class="postcard__text">
+                      <h2 class="postcard__subtitle small"><a> By : {{ item.by }}</a></h2>
+                    <h1 class="postcard__title blue"><a>{{item.Title}}</a></h1>
+                    <div class="postcard__subtitle small">
+                        <time datetime="">
+                            <i class="fas fa-calendar-alt mr-2"></i>{{item.Date}}
+                        </time>
+                    </div>
+                    <div class="postcard__bar"></div>
+                    <div class="postcard__preview-txt">{{item.Participation}}</div>
+                    <div class="postcard__preview-txt" style="font-weight: 700;">{{item.Venue}}</div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+
+
+</section>-->
+
+
+<div class="container">
+
+    <div id="products" class="row view-group">
+
+
+        <div class="item col-xs-4 col-lg-4" *ngFor="let item of this.trainingProgram">
+            <div class="thumbnail card">
+                <div class="img-event">
+                    <img class="group list-group-image img-fluid" [src]="item.ImageLink" alt="" />
+                </div>
+                <div class="caption card-body">
+                    <h4 class="group card-title inner list-group-item-heading">
+                       {{item.Title}}</h4>
+                    <div class="postcard__subtitle small">
+                        <time datetime="">
+                            <i class="fas fa-calendar-alt mr-2"></i>{{item.Date}}
+                        </time>
+                    </div>
+                    <p class="group inner list-group-item-text">
+                        {{item.Participation}}
+                    </p>
+                    <p> <b> {{item.Venue}}</b></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

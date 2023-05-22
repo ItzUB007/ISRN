@@ -1,3 +1,36 @@
+<div class="login-background">
+  <div class="login-box">
+    <h2>Sign Up</h2>
+    <form>
+      <div class="user-box">
+        <input type="text" #userEmail required>
+        <label>Username</label>
+      </div>
+      <div class="user-box">
+        <input type="password" #userPwd required>
+        <label>Password</label>
+      </div>
+      <a (click)="authService.SignUp(userEmail.value, userPwd.value)">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Register
+      </a>
+      <div class="formGroup">
+        <button type="button" class="btn googleBtn" style="color:white" (click)="authService.GoogleAuth()">
+          <i class="fab fa-google-plus-g"></i>
+          Continue with Google
+        </button>
+        <div class="redirectToLogin">
+          <span>Already have an account?<span class="redirect" routerLink="/sign-in" style="color: white;"> Sign In</span></span>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--
 <div class="displayTable">
     <div class="displayTableCell">
       <div class="authBlock">
@@ -31,7 +64,8 @@
         <div class="formGroup">
           <span class="or"><span class="orInner">Or</span></span>
         </div>
-        <!-- Continue with Google -->
+
+
         <div class="formGroup">
           <button
             type="button"
@@ -50,4 +84,4 @@
         >
       </div>
     </div>
-  </div>
+  </div>-->

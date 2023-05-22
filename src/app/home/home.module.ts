@@ -23,7 +23,13 @@ import { GetInvolvedComponent } from './get-involved/get-involved.component';
 import { DonateComponent } from './donate/donate.component';
 import { MembershipComponent } from './membership/membership.component';
 import { ContactComponent } from './contact/contact.component';
-
+import { WhatwedoTrainingProgramsComponent } from './whatwedo-training-programs/whatwedo-training-programs.component';
+import { C20Component } from './c20/c20.component';
+import { AdvocacyComponent } from './advocacy/advocacy.component';
+import { MIRTEComponent } from './mirte/mirte.component';
+import { MembersDirectoryComponent } from './members-directory/members-directory.component';
+import { FormsModule } from '@angular/forms';
+import { CountUpModule } from 'ngx-countup';
 
 
 @NgModule({
@@ -45,13 +51,20 @@ import { ContactComponent } from './contact/contact.component';
     GetInvolvedComponent,
     DonateComponent,
     MembershipComponent,
-    ContactComponent,    
+    ContactComponent,
+    WhatwedoTrainingProgramsComponent,
+    C20Component,
+    AdvocacyComponent,
+    MIRTEComponent,
+    MembersDirectoryComponent,    
   ],
   imports: [
     PdfViewerModule,
     CommonModule,
     HomeRoutingModule,
-    FullCalendarModule
+    FullCalendarModule,
+    FormsModule,
+    CountUpModule
   ],
   bootstrap: [LandingComponent]
 })

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbService } from '../../Services/db.service';
 
 @Component({
   selector: 'app-who-we-are',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhoWeAreComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db:DbService) { }
 
   governing: any;
   advisory:any;
   meetourteam:any;
+  governBoardMember:any;
+  advisoryBoardMamber:any;
+  MeetOurTeamMember:any;
 
 
   getGoverning(){ 
@@ -39,6 +43,27 @@ export class WhoWeAreComponent implements OnInit {
     this.governing = document.querySelector('.governing');
     this.advisory = document.querySelector('.advisory');
     this.meetourteam = document.querySelector('.meetourteam');
+
+    this.db.getGoverningBoard().subscribe((data:any)=>{
+      data.sort((a:any,b:any)=>{
+        return a.Position - b.Position;
+      })
+      this.governBoardMember = data;
+    })
+
+    this.db.getAdvisoryBoard().subscribe((data:any)=>{
+      data.sort((a:any,b:any)=>{
+        return a.Position - b.Position;
+      })
+      this.advisoryBoardMamber = data;
+    })
+
+    this.db.getMeetOurTeam().subscribe((data:any)=>{
+      data.sort((a:any,b:any)=>{
+        return a.Position - b.Position;
+      })
+      this.MeetOurTeamMember = data;
+    })
 
 
     

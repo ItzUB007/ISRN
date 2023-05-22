@@ -10,9 +10,20 @@ export class LandingComponent implements OnInit {
   constructor() { }
 
   navbar:any;
+  navItems:any;
   //navitem:any;
 
   ngOnInit(): void {
+    
+
+    /*this.navItems = document.querySelectorAll('.nav-item');
+    console.log(this.navItems)
+
+    this.navItems.forEach((data:any)=>{
+      data.addEventListener('click', (e:any)=>{
+        data.classList.add('nav-item');
+      })
+    })*/
 
     this.navbar = document.querySelector('#ftco-navbar');
     /*this.navitem = document.querySelectorAll('.nav-item');

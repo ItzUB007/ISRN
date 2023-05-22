@@ -40,6 +40,12 @@
   padding-bottom: 20px;
 }*/
 
+.numbers{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .wwd_first {
   margin-top: 5vh;
   background-image:
@@ -51,7 +57,7 @@
   background-size: cover;
   width: 100%;
   height: auto;
-  padding: 10vh 0;
+  padding: 25vh 0;
   text-align: center;
     color: #fff;
 }
@@ -556,13 +562,13 @@ p.testimonialFrom {
   align-items: center;
   justify-content: center;
   min-height: 20vh;
-  background: #27272c;
+  background: var(--red);
 }
 
 button {
   position: relative;
-  background: #444;
-  color: #fff;
+  background: #fff;
+  color: #444;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
@@ -585,7 +591,7 @@ button::before {
   content: "";
   position: absolute;
   inset: 2px;
-  background: #272822;
+  background: #ffffff;
 }
 
 button span {
