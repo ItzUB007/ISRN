@@ -33,11 +33,8 @@
                   <div class="carousel-item active">
                     <img src="../../../assets/images/health.jpg" class="d-block w-100" alt="...">
                   </div>
-                  <div class="carousel-item">
-                    <img src="../../../assets/images/Education.jpg" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../../../assets/images/Agriculture.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-item" *ngFor="let item of slider1">
+                    <img [src]="item.PicLink" class="d-block w-100" alt="...">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -82,11 +79,8 @@
               <div class="carousel-item active">
                 <img src="../../../assets/images/health.jpg" class="d-block w-100" alt="...">
               </div>
-              <div class="carousel-item">
-                <img src="../../../assets/images/Education.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="../../../assets/images/Agriculture.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-item" *ngFor="let item of slider2">
+                <img [src]="item.PicLink" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

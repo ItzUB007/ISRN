@@ -6,6 +6,21 @@ $font-size:14px;
 $font-paragraph:"Source Sans Pro";
 $font-heading:"Roboto";
 
+.carousel-inner{
+    height: 70vh;
+    overflow: hidden;
+}
+
+.carousel-item{
+    overflow: hidden;
+    img{
+        text-align: center;
+    }
+}
+
+
+
+
 
 .blog-post {
 

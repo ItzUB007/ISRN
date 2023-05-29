@@ -1,0 +1,39 @@
+.pdf-viewer{
+    width: 350px;
+    height: 450px;
+    border: 2px black solid;
+    margin-bottom: 40px;
+}
+
+.Allpdfs{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.blur{
+    filter: blur(8px);
+}
+
+.login-prompt{
+    z-index: 10;
+    width: 350px;
+    height: 450px;
+    position: absolute;
+    p{
+        font-size: 2rem;
+        position: absolute;
+        top: 30%;
+        text-align: center;
+        color: crimson;
+    }
+}
+
+.login-prompt-bg{
+    //filter: blur(8px);
+    //background-color: rgba(240, 248, 255, 0.722);
+    width: 350px;
+    height: 450px;
+}

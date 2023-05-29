@@ -22,9 +22,9 @@ declare var $: any;
 
 export class HomeViewComponent implements OnInit {
 
+  constructor(private db: DbService, private firestore: AngularFirestore) { }
 
   // Rolling Numbers
-
   pickANumber = 500;
   endVal = 1000;
   endVal2 = 25000;
@@ -56,7 +56,6 @@ export class HomeViewComponent implements OnInit {
 
   // End of Rolling Numbers
 
-  constructor(private db: DbService, private firestore: AngularFirestore) { }
 
   //Calender
 
@@ -64,6 +63,8 @@ export class HomeViewComponent implements OnInit {
     /*{ title: 'event 1', date: '2023-04-01' },
     { title: 'event 2', date: '2023-04-19' },*/
   ];
+
+  homePageSlideshow:any;
 
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
@@ -100,7 +101,14 @@ export class HomeViewComponent implements OnInit {
 
 
 
+
+
   ngOnInit(): void {
+
+    this.db.getRollingNumbers().subscribe((data:any)=>{
+      this.endVal = data[0].Beneficiaries;
+      this.endVal2 = data[0].Members;
+    })
 
 
     /* let states = [
@@ -297,7 +305,9 @@ export class HomeViewComponent implements OnInit {
      })*/
 
 
-
+     this.db.getHomePageSlideshow().subscribe((data:any)=>{
+      this.homePageSlideshow = data
+     })
 
 
 

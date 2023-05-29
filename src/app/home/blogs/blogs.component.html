@@ -1,1 +1,42 @@
-<p>blogs works!</p>
+<section class="hero-wrap hero-wrap-2" style="background-image: url('../../../assets/images//GetInvolved.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-9 pb-5">
+                <p class="breadcrumbs"><span class="mr-2"><a href="">Home <i class="fa fa-chevron-right"></i></a></span>
+                    <span>Blogs<i class="fa fa-chevron-right"></i></span>
+                </p>
+                <h1 class="mb-3 bread">Blogs</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container2">
+    <a *ngFor="let blog of blogs" [routerLink]="['/blog']" [queryParams]="{blogid: blog.id}">
+        <div class="card">
+            <div class="card-header">
+                <img [src]="blog.MainPicLink"
+                    alt="" />
+            </div>
+            <div class="card-body">
+                <span class="tag tag-teal">{{blog.genre}}</span>
+                <h4>{{blog.Title}}</h4>
+                <p>
+                    {{blog.ShortContent}}
+                </p>
+                <div class="user">
+                    <img [src]="blog.ByPicLink"
+                        alt="" />
+                    <div class="user-info">
+                        <h5>{{blog.By}}</h5>
+                        <small>{{blog.Date}}</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    
+
+</div>

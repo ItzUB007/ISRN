@@ -30,6 +30,7 @@ import { MIRTEComponent } from './mirte/mirte.component';
 import { MembersDirectoryComponent } from './members-directory/members-directory.component';
 import { FormsModule } from '@angular/forms';
 import { CountUpModule } from 'ngx-countup';
+import { SingleBlogComponent } from './single-blog/single-blog.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { CountUpModule } from 'ngx-countup';
     C20Component,
     AdvocacyComponent,
     MIRTEComponent,
-    MembersDirectoryComponent,    
+    MembersDirectoryComponent,
+    SingleBlogComponent,    
   ],
   imports: [
     PdfViewerModule,

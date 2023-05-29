@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbService } from '../../Services/db.service';
 
 @Component({
   selector: 'app-c20',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class C20Component implements OnInit {
 
-  constructor() { }
+  constructor(private db:DbService) { }
+
+  slider:any;
 
   ngOnInit(): void {
+
+    this.db.getC20Slider().subscribe(data=>{
+      this.slider = data;
+    })
+
   }
 
 }

@@ -22,6 +22,10 @@ import { C20Component } from './c20/c20.component';
 import { AdvocacyComponent } from './advocacy/advocacy.component';
 import { MIRTEComponent } from './mirte/mirte.component';
 import { MembersDirectoryComponent } from './members-directory/members-directory.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { SingleBlogComponent } from './single-blog/single-blog.component';
+import { single } from 'rxjs';
+
 
 
 const routes: Routes = [
@@ -48,7 +52,9 @@ const routes: Routes = [
       { path: "whatwedo-training", component:WhatwedoTrainingProgramsComponent },
       { path: "whatwedo-advocacy", component:AdvocacyComponent },
       { path: "covid19-mirte", component:MIRTEComponent },
-      { path: "membersdirectory", component:MembersDirectoryComponent }
+      { path: "membersdirectory", component: MembersDirectoryComponent },
+      { path: "blogs", component: BlogsComponent },
+      { path: "blog", component: SingleBlogComponent },
     ]
   },
   

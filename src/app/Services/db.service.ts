@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from "@angular/fire/compat/firestore";
 import { collection } from '@angular/fire/firestore';
+import { AuthService } from './auth.service'
 
 
 @Injectable({
@@ -8,7 +9,7 @@ import { collection } from '@angular/fire/firestore';
 })
 export class DbService {
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private firestore: AngularFirestore, private authService: AuthService) { }
 
   getGoverningBoard() {
     return this.firestore
@@ -82,7 +83,55 @@ export class DbService {
     .valueChanges();
   }
 
-  
+  getUserByUid(uid:any){
+    return this.firestore
+    .collection('users', ref => ref.where('uid', '==', uid).limit(1))
+    .valueChanges();
+  }
 
+
+  getHomePageSlideshow(){
+    return this.firestore
+    .collection('HomePageSlideshow')
+    .valueChanges()
+  }
+  
+  getBlogsById(blogId:any){
+    return this.firestore
+    .collection('blogs')
+    .doc(blogId)
+    .valueChanges()
+  }
+
+  getBlogs(){
+    return this.firestore
+    .collection('blogs')
+    .valueChanges({ idField: 'id' })
+  }
+
+  getRollingNumbers(){
+    return this.firestore
+    .collection('RollingNumbers')
+    .valueChanges();
+  }
+
+  getC20Slider(){
+    return this.firestore
+    .collection('C20Slider')
+    .valueChanges();
+  }
+
+
+  getAgricultureSlider1(){
+    return this.firestore
+    .collection('AgricultureSlider1')
+    .valueChanges();
+  }
+
+  getAgricultureSlider2(){
+    return this.firestore
+    .collection('AgricultureSlider2')
+    .valueChanges();
+  }
 
 }

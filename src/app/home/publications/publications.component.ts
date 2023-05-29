@@ -22,6 +22,8 @@ export class PublicationsComponent implements OnInit {
   public currentPage = 1;
   public maxPages = 3
   pdfViewerDiv:any;
+  user:any;
+  uid: any;
   
   pdfsAnnual:any = [
     /*{
@@ -75,6 +77,15 @@ export class PublicationsComponent implements OnInit {
 
     //this.pdfViewerDiv = document.querySelectorAll('.pdf-container');
 
+
+    //console.log(JSON.parse(localStorage.getItem('user')!));
+    let uid = JSON.parse(localStorage.getItem('user')!).uid;
+
+      this.db.getUserByUid(uid).subscribe(data=>{
+        this.user = data;
+      })
+    
+
     this.db.getAnnualReports().subscribe((data:any)=>{
       this.pdfsAnnual = data;
       this.pdfsAnnual.forEach((data:any)=>{
@@ -122,7 +133,7 @@ export class PublicationsComponent implements OnInit {
     source.currentPage = event?.pageNumber;
     console.log(source.currentPage)
     console.log(index)
-    if (source.currentPage > 3 && !this.authService.isLoggedIn) {
+    if (source.currentPage > 3 && !this.user[0].hasMembership) {
       // display a prompt to log in
       this.pdfViewerDiv[index].classList.add('blur')
       this.maxPages = 3;
