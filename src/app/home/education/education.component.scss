@@ -2,6 +2,8 @@
 
 //goal
 
+
+
 .about{
     margin-bottom: 0;
 	cursor: pointer;
@@ -9,6 +11,12 @@
 	color: #FFFFFF;
 	padding-top: 20px;
 	padding-bottom: 30px;
+	hr{
+		border: 2px solid white;
+	}
+}
+.about2{
+	background-color: var(--red);
 }
 .about h1 {
 	padding: 10px 0;

@@ -12,11 +12,19 @@ export class C20Component implements OnInit {
 
   slider:any;
 
+  BannerUrl:any;
+
   ngOnInit(): void {
 
     this.db.getC20Slider().subscribe(data=>{
       this.slider = data;
     })
+
+    this.db.getBannersC20().subscribe((data:any)=>{
+      this.BannerUrl = data.ImageUrl;
+      console.log(data)
+    });
+
 
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbService } from '../../Services/db.service';
 
 @Component({
   selector: 'app-get-involved',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GetInvolvedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DbService) { }
+
+  BannerUrl: any;
 
   ngOnInit(): void {
-  }
 
+    this.db.getBannersGetInvolved().subscribe((data: any) => {
+      this.BannerUrl = data.ImageUrl;
+      console.log(data)
+    });
+  }
 }

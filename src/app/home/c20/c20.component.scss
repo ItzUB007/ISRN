@@ -1,25 +1,21 @@
 //HEADINGS
-$mid-grey:#555353;
-$charcoal:#373737;
-$font-weight:500;
-$font-size:14px;
-$font-paragraph:"Source Sans Pro";
-$font-heading:"Roboto";
+$mid-grey: #555353;
+$charcoal: #373737;
+$font-weight: 500;
+$font-size: 14px;
+$font-paragraph: "Source Sans Pro";
+$font-heading: "Roboto";
 
-.carousel-inner{
+.carousel-item {
     height: 70vh;
     overflow: hidden;
-}
 
-.carousel-item{
-    overflow: hidden;
-    img{
-        text-align: center;
+    img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
     }
 }
-
-
-
 
 
 .blog-post {
@@ -123,8 +119,9 @@ article {
     height: auto;
     overflow: hidden;
     margin: 50px auto 60px;
+
     //padding-bottom: 35%;
-    img{
+    img {
         height: auto;
         width: 100%;
     }
@@ -177,4 +174,42 @@ b {
     .blog-hero {
         padding-bottom: 60%;
     }
+}
+
+
+.vasudev {
+    width: 100%;
+    height: auto;
+    clip-path: polygon(87.71% 98%, 100% 89.71%, 100% 0%, 70.71% 0%, 29.29% 0%, 0% 0%, 0% 92.46%, 29.29% 86.09%);
+}
+
+.twoPics {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+
+    img {
+        width: 700px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+
+.coordinators{
+    width: 100%;
+    height: auto;
+}
+
+.coordinators::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 90%);
+    width: 100%;
+    height: 4em;
 }

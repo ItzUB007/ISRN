@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbService } from '../../Services/db.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,13 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DbService) { }
 
   navbar:any;
   navItems:any;
   //navitem:any;
 
   ngOnInit(): void {
+
+    const topetc = new IntersectionObserver(entries => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+          // Add the animation class
+          entry.target.classList.add('fadeinAnimationClass');
+        }
+      });
+    });
+
+    topetc.observe(document.querySelector('.topetc')!);
+
     
 
     /*this.navItems = document.querySelectorAll('.nav-item');
@@ -51,6 +66,21 @@ export class LandingComponent implements OnInit {
 
     });
 
+    /*document.querySelector('.getInvolvedTag')?.addEventListener('mouseenter', (event)=>{
+      document.querySelector('.getInvolvedDD')?.classList.toggle('hide');
+    })
+
+    document.querySelector('.getInvolvedDD')?.addEventListener('mouseleave', (event)=>{
+      document.querySelector('.getInvolvedDD')?.classList.toggle('hide');
+    })
+
+    document.querySelector('.getInvolvedTag')?.addEventListener('mouseleave', (event)=>{
+      document.querySelector('.getInvolvedDD')?.classList.toggle('hide');
+    })*/
 
   }
+
+  
+
+
 }

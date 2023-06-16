@@ -1,4 +1,4 @@
-<!--<section class="hero-wrap js-fullheight" style="background-image: url('../../../assets/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+<!--<section class="hero-wrap js-fullheight" style="background-image: url('../../../assets/images/bg_1.jpg');"  >
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center" data-scrollax-parent="true">
@@ -33,7 +33,7 @@
                 </div>
             </div>
 
-            <img class="d-block w-100" src="../../../assets/images/First Slideshow/7.png" alt="First slide">
+            <img class="d-block w-100" src="../../../assets/images/First Slideshow/default2.jpg" alt="First slide">
         </div>
 
         <div class="carousel-item " *ngFor="let item of homePageSlideshow">
@@ -70,8 +70,8 @@
 
 <section class="ftco-section ftco-no-pt ftco-no-pb ftco-services-2">
     <div class="container">
-        <div class="row no-gutters d-flex">
-            <div class="col-lg-4 d-flex align-self-stretch">
+        <div class="row no-gutters d-flex ">
+            <div class="col-lg-4 d-flex align-self-stretch visionCard" style="opacity: 0;">
                 <div class="media block-6 services d-flex">
                     <!--<div class="icon justify-content-center align-items-center d-flex"><span
                             class="flaticon-engineer-1"></span></div>-->
@@ -84,7 +84,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 d-flex align-self-stretch  ">
+            <div class="col-lg-4 d-flex align-self-stretch  goalCard" style="opacity: 0;">
                 <div class="media block-6 services services-2 d-flex">
                     <!--<div class="icon justify-content-center align-items-center d-flex"><span
                             class="flaticon-worker-1"></span></div>-->
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 d-flex align-self-stretch">
+            <div class="col-lg-4 d-flex align-self-stretch missionCard" style="opacity: 0;">
                 <div class="media block-6 services d-flex">
                     <!--<div class="icon justify-content-center align-items-center d-flex"><span
                             class="flaticon-engineer"></span></div>-->
@@ -141,7 +141,7 @@
             </div>
         </div>
         <div class="row">
-            <img src="../../../assets/images/upcoming events/Navigating your way SSE.jpg" alt="event"
+            <img [src]="this.upcomingEventPic.ImageLink" alt="event"
                 style="width: 100%; height: auto;">
         </div>
     </div>
@@ -149,25 +149,90 @@
 
 
 
+<!--<div style="background-image: repeating-linear-gradient(45deg, transparent, transparent 100px, #e8e80c 100px, #e8e80c 200px);" >
+Line Bg-->
 
 <div class="row justify-content-center mb-5 pb-2 mt-5">
     <div class="col-md-8 text-center heading-section   ">
-        <span class="subheading">Event Calender and</span>
-        <h2 class="mb-4">Socials</h2>
+        <span class="subheading">Event</span>
+        <h2 class="mb-4">Calender</h2>
     </div>
 </div>
 
 
 <div class="calender-social">
 
-    <full-calendar [options]="calendarOptions"></full-calendar>
-    <div class="socialMedia">
-        <a class="twitter-timeline" href="https://twitter.com/ISRNnewdelhi?ref_src=twsrc%5Etfw">Tweets by
+    <div class="card" style="width: 500px;">
+        <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+
+    <div class="card heading-section" id="EventsList" style="width: 500px; overflow-y: scroll;">
+        <h2 style="font-variant: small-caps; margin: 20px;">Upcoming Events List</h2>
+        <div class="blog-item" *ngFor="let event of EventsData">
+            <a href="#">
+                
+                <div class="content1">
+                    <div class="title">{{event.title}} <span class="blog-date">{{event.date}}</span></div>
+                    <div class="rounded"></div>
+                </div>
+            </a>
+        </div>
+
+
+    </div>
+
+    <!--<div class="socialMedia">
+        <a class="twitter-timeline" data-width="250" data-height="1000" href="https://twitter.com/ISRNnewdelhi?ref_src=twsrc%5Etfw">Tweets by
             ISRNnewdelhi</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>-->
+</div>
+
+
+<div class="row justify-content-center mb-5 pb-2 mt-5">
+    <div class="col-md-8 text-center heading-section   ">
+        <span class="subheading">The</span>
+        <h2 class="mb-4">Socials</h2>
+    </div>
+</div>
+
+<div class="SocialHandles container">
+    <div style="text-align: center;" class="heading-section">
+        <h2 style="color: #4267B2;">Facebook</h2>
+        <!--<a class="socialIcons" href="#"><span class="fa fa-twitter"></span></a>-->
+        <div class="card" style="width: 25rem;">
+            <div id="fb-root"></div>
+            <div class="fb-page" data-href="https://www.facebook.com/isrnnewdelhi" data-tabs="timeline" data-width="500"
+                data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+                data-show-facepile="true">
+                <blockquote cite="https://www.facebook.com/isrnnewdelhi" class="fb-xfbml-parse-ignore"><a
+                        href="https://www.facebook.com/isrnnewdelhi">Indian Social Responsibility Network - ISRN</a>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center;" class="heading-section">
+        <h2 style="color: #1DA1F2;">Twitter</h2>
+        <!--<a class="socialIcons justify-content-center" href="#"><span class="fa fa-facebook"></span></a>-->
+        <div class="card" style="width: 25rem;">
+            <div class="socialMedia twitter">
+                <a class="twitter-timeline" data-width="" data-height=""
+                    href="https://twitter.com/ISRNnewdelhi?ref_src=twsrc%5Etfw">Tweets by
+                    ISRNnewdelhi</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
     </div>
 
 </div>
+
+
+
+
+<!--</div> Line Bg-->
+
+
 
 <div class="wwd_cards">
     <div class="content">
@@ -350,7 +415,7 @@
         <a (click)="this.cross();"><i class="fa fa-times" aria-hidden="true"></i></a>
         <h1>{{this.country}}</h1>
         <p *ngIf="this.org">The Current Number Of Members Involved: {{this.org}}</p>
-        <p *ngIf="this.bene" >The Current Number Of Beneficiaries: {{this.bene}}</p> 
+        <p *ngIf="this.bene">The Current Number Of Beneficiaries: {{this.bene}}</p>
     </section>
 </div>
 
@@ -367,33 +432,35 @@
         <p style="text-align: center;">The term "impact" holds significant importance for us. Currently, our main
             focus areas for our efforts involve reaching numerous individuals residing in different remote areas
             throughout the country and delivering the highest quality of service possible to them.</p>
-            
-            <section class="ftco-section" id="about-section" style="padding: 0; padding-top: 50px;">
-                <div class="container">
-                    
-                    <div class="numbers">
-            
-                        <div class="amount heading-section">
-                            <h2 [countUp]="endVal" [options]="opts" (complete)="doThisOnComplete()">0</h2>
-                            <p>Total Number of Beneficiaries<p>
-                        </div>
-            
-                        <div class="amount heading-section">
-                            <h2 [countUp]="endVal2" [options]="opts" (complete)="doThisOnComplete()">0</h2>
-                            <p>Total Number of Members<p>
-                        </div>
-            
+
+        <section class="ftco-section" id="about-section" style="padding: 0; padding-top: 50px;">
+            <div class="container">
+
+                <div class="numbers">
+
+                    <div class="amount heading-section">
+                        <h2 [countUp]="endVal" [options]="opts" (complete)="doThisOnComplete()">0</h2>
+                        <p>Total Number of Beneficiaries
+                        <p>
                     </div>
-            
+
+                    <div class="amount heading-section">
+                        <h2 [countUp]="endVal2" [options]="opts" (complete)="doThisOnComplete()">0</h2>
+                        <p>Total Number of Members
+                        <p>
+                    </div>
+
                 </div>
-            </section>
+
+            </div>
+        </section>
     </div>
 </section>
 
 
 
 
-<div class="map_svg">
+<div class="map_svg card" style="width: 90%; box-shadow: none; border: none; height: auto;">
     <svg xmlns:mapsvg="http://mapsvg.com" xmlns:dc="http://purl.org/dc/elements/1.1/"
         xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
         xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" id="svg2"
@@ -768,46 +835,10 @@
                 <div class="container">
                     <strong>
                         <div class="row">
-                            <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="col-sm-6 col-md-4 col-lg-3" *ngFor="let item of partners">
                                 <div class="square-holder">
                                     <img alt=""
-                                        src="https://www.pmits.co.uk/portals/0/images/partners/solar-communications-200.png" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="square-holder">
-                                    <img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/cbf-200.png" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="square-holder">
-                                    <img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/gxs-200.png" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="square-holder">
-                                    <img alt="" src="https://www.pmits.co.uk/portals/0/images/partners/jpr-200.png" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="square-holder">
-                                    <img alt=""
-                                        src="https://www.pmits.co.uk/portals/0/images/partners/talk-internet-200.png" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="square-holder">
-                                    <img alt="" src="https://www.pmits.co.uk/Portals/0/img/opera3_logo.png" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="square-holder">
-                                    <img alt="" src="https://www.pmits.co.uk/Portals/0/pegasus-logo.png" />
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-md-4 col-lg-3">
-                                <div class="square-holder">
-                                    <img alt="" src="https://www.pmits.co.uk/Portals/0/sage business partner.jpg" />
+                                        [src]="item.ImageUrl"/>
                                 </div>
                             </div>
                         </div>

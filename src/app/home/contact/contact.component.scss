@@ -172,7 +172,7 @@ transition: transform .3s, -webkit-transform .3s
 }
 
 .user-cards .card-link {
-height: 22px;
+height: 40px;
 position: relative;
 overflow: hidden
 }
@@ -187,11 +187,11 @@ left: 0;
 transition: top .3s
 }
 
-.user-cards .card-link::after {
+/*.user-cards .card-link::after {
 content: 'Explore';
 top: 100%;
 color: #fff
-}
+}*/
 
 .user-cards .card-link span {
 top: 0
@@ -306,5 +306,6 @@ background: #fbb359
 
     .card-link{
         font-size: 1rem;
+        color: white;
     }
 }

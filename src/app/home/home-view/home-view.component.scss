@@ -40,19 +40,25 @@
   padding-bottom: 20px;
 }*/
 
+
+
 .numbers{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
+
 .wwd_first {
   margin-top: 5vh;
+  clip-path: polygon(87.71% 98%, 100% 89.71%, 100% 0%, 70.71% 0%, 29.29% 0%, 0% 0%, 0% 92.46%, 29.29% 86.09%);
   background-image:
   radial-gradient(
     rgba(0, 0, 0, 0.144),
     rgb(0, 0, 0)), url(
 '../../../assets/images/aboutPic.jpg');
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -78,7 +84,10 @@
   justify-content: center;
   margin-bottom: 20px;
   background-color: #f1f1f1;
-  min-height: 200px
+  min-height: 200px;
+  height: 250px;
+  width: 250px;
+  overflow: hidden;
 }
 
 .square-holder img {
@@ -794,14 +803,136 @@ path:hover {
     }
   }
 }
+/////////////////////////////////////////////////////////////////////////////////////////////////////// Calendar
 
+.blog-item img {
+  display: block;
+}
+
+.blog-item a {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    padding: 20px;
+}
+
+.blog-item a:hover {
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.blog-item .icon {
+    width: 35%;
+    object-fit: cover;
+    margin-right: 50px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 15px 26px rgba(0, 0, 0, 0.4);
+}
+
+.blog-item .content1 {
+    width: 65%;
+}
+
+.blog-item .content1 .title {
+    font-size: 21px;
+    text-transform: capitalize;
+    color: #fe9400;
+    font-weight: 600;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+.blog-item .content1 .title .blog-date {
+    font-size: 12px;
+    margin-left: 20px;
+    color: #333;
+    font-family: 'Lato', sans-serif;
+}
+
+.blog-item .content1 .title .blog-date:before {
+    content: '/';
+    color: #ffea00;
+    font-size: 25px;
+    top: auto;
+    position: relative;
+    margin-right: 10px;
+}
+
+.blog-item .content1 .rounded {
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.rounded {
+    width: 70px;
+    height: 5px;
+    border-radius: 6px;
+    background-image: linear-gradient(to right, #efd700, #ff8400);
+    /* background: #2bb769; */
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px){
+
+    .blog-item .content {
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .blog-item .content .title {
+        font-size: 18px;
+    }
+
+    .blog-item .item-arrow {
+        margin: auto;
+    }
+
+    .blog-item .icon {
+        width: 100%;
+    }
+
+    .blog-item .icon img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .blog-item {
+        width: 92%;
+        margin: auto;
+    }
+
+    .blog-item a {
+        display: block;
+        padding: 30px;
+    }
+
+}
 
 
 
 
 
 .calender-social {
-  height: 100vh;
+  max-height: 100vh;
   margin-top: 5vh;
   display: flex;
   flex-wrap: wrap;
@@ -809,9 +940,44 @@ path:hover {
 }
 
 full-calendar {
-  width: 40%;
+  width: 100%;
+  padding: 10px;
 }
 
+
+.SocialHandles{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+  //overflow: hidden;
+}
+
+.socialIcons{
+  display: inline-block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.463);
+  span{
+    height: 50px;
+    width: auto;
+  }
+}
+
+.card{
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.416);
+}
+
+.twitter{
+  width: 100%;
+  overflow-y: scroll;
+}
+
+
+
+/*
 .socialMedia {
   height: 100%;
   width: 40%;
@@ -833,7 +999,7 @@ full-calendar {
   .calender-social{
     flex-direction: row;
   }
-}
+}*/
 
 
 //////////////////////////////////
@@ -886,6 +1052,9 @@ $orange: hsl(50, 80%, 50%);
     @content;
   }
 }
+
+
+
 
 .wwd_cards {
   width: 100%;

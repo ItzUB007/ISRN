@@ -1,0 +1,222 @@
+
+
+//goal
+
+
+
+.about{
+    margin-bottom: 0;
+	cursor: pointer;
+	background-color: #fc5e28;
+	color: #FFFFFF;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	hr{
+		border: 2px solid white;
+	}
+}
+.about2{
+	background-color: var(--red);
+}
+.about h1 {
+	padding: 10px 0;
+	margin-bottom: 20px;
+    font-weight: 600;
+    color: white;
+}
+.about h2 {
+	opacity: .8;
+}
+.about span {
+	display: block;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	margin:auto;
+	border-radius:50%;  
+	font-size: 40px;
+	color: #FFFFFF;
+	opacity: 0.7;
+	background-color: #d93600;
+	border: 2px solid #d93600;
+
+	webkit-transition:all .5s ease;
+ 	moz-transition:all .5s ease;
+ 	os-transition:all .5s ease;
+ 	transition:all .5s ease;
+
+}
+.about-item:hover span{
+	opacity: 1;	
+	border: 2px solid #ff4000;
+	font-size: 42px;
+	-webkit-transform: scale(1.1,1.1) rotate(360deg) ;
+	-moz-transform: scale(1.1,1.1) rotate(360deg) ;
+	-o-transform: scale(1.1,1.1) rotate(360deg) ;
+	transform: scale(1.1,1.1) rotate(360deg) ;
+}
+.about-item:hover h2{
+	opacity: 1;
+	-webkit-transform: scale(1.1,1.1)  ;
+	-moz-transform: scale(1.1,1.1)  ;
+	-o-transform: scale(1.1,1.1)  ;
+	transform: scale(1.1,1.1) ;
+}
+.about .lead{
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+
+
+ 
+  // #app {
+  //   padding-bottom: 330%;
+  // }
+  
+  .gallery {
+  
+    /* https://tobiasahlin.com/blog/masonry-with-css/ */
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    overflow: hidden;
+    
+    height: 310vw; // Sized based on vw to expand properly
+    
+    .gallery-image {
+      width: 33.3%;
+      
+      &[data-flipping] {
+        opacity: 1;
+        z-index: 3;
+      }
+    }
+  
+  
+    /* Re-order items into rows */
+    .gallery-image:nth-child(3n+1) { order: 1; }
+    .gallery-image:nth-child(3n+2) { order: 2; }
+    .gallery-image:nth-child(3n)   { order: 3; }
+  
+    /* Force new columns */
+    &::before,
+    &::after {
+      content: "";
+      flex-basis: 100%;
+      width: 0;
+      order: 2;
+    }
+  
+    //display: grid;
+    //grid-template-columns: 1fr 1fr 1fr;
+  }
+  
+  .gallery-image {
+    margin: 0;
+    display: block;
+    position: relative;
+  
+    img {
+      display: block;
+      width: 100%;
+    }
+    
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #FFF;
+      text-shadow: 0 0 1px #000;
+      opacity: 0.8;
+      padding: 1em;
+      text-align: left;
+      transition: opacity .4s linear;
+      font-family: monospace;
+    }
+    
+    &:hover figcaption {
+      opacity: 1;
+    }
+  }
+  
+  .detail {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(25,25,25,0);
+    box-shadow: 0 0 30px #000;
+    display: flex;
+    pointer-events: none;
+    transition: background .3s linear;
+  
+    .gallery-image {
+      padding: 5vmin;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      img { 
+        width: auto;
+        height: auto;
+        max-width: 100%; 
+        max-height: 100%; 
+      }
+      
+      figcaption { display: none; }
+      
+    }
+  }
+  
+  [data-state="detail"] .detail {
+    // opacity: 1; 
+    background: rgba(25,25,25,.85);
+    pointer-events: auto;
+    .gallery-image { opacity: 1; }
+  }
+  
+  [data-state="gallery"] .detail {
+    
+    .gallery-image {
+      opacity: 0;
+      transition: none;
+    }
+  }
+  
+  /* ---------------------------------- */
+  
+  #app {
+    pointer-events: none;
+    
+    .gallery .gallery-image {
+      pointer-events: auto;
+    }
+  }
+  
+  .gallery-image {
+    transition: opacity .5s linear;
+  }
+  
+  #app:hover .gallery {
+    .gallery-image { opacity: 0.3; }
+    
+    .gallery-image[data-flipping],
+    .gallery-image:hover { 
+      opacity: 1;
+      transition-duration: .3s;
+    }
+  }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////

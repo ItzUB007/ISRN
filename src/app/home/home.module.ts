@@ -31,6 +31,7 @@ import { MembersDirectoryComponent } from './members-directory/members-directory
 import { FormsModule } from '@angular/forms';
 import { CountUpModule } from 'ngx-countup';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
+import { FPIPVComponent } from './fp-ipv/fp-ipv.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { SingleBlogComponent } from './single-blog/single-blog.component';
     AdvocacyComponent,
     MIRTEComponent,
     MembersDirectoryComponent,
-    SingleBlogComponent,    
+    SingleBlogComponent,
+    FPIPVComponent,    
   ],
   imports: [
     PdfViewerModule,

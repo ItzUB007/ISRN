@@ -24,6 +24,7 @@ import { MIRTEComponent } from './mirte/mirte.component';
 import { MembersDirectoryComponent } from './members-directory/members-directory.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { SingleBlogComponent } from './single-blog/single-blog.component';
+import { FPIPVComponent } from './fp-ipv/fp-ipv.component';
 import { single } from 'rxjs';
 
 
@@ -55,6 +56,7 @@ const routes: Routes = [
       { path: "membersdirectory", component: MembersDirectoryComponent },
       { path: "blogs", component: BlogsComponent },
       { path: "blog", component: SingleBlogComponent },
+      { path: "fpv", component: FPIPVComponent },
     ]
   },
   

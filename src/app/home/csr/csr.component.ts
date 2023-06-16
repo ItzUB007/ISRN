@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import * as pdfjs from 'pdfjs-dist';
+import { DbService } from '../../Services/db.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Component, OnInit } from '@angular/core';
 export class CsrComponent implements OnInit {
 
   imagedata: any;
-  constructor() { }
+  constructor(private db: DbService) { }
 
   /*convertPdfToImg(url: any) {
     pdfjs.getDocument(url).promise.then((pdf) => {
@@ -47,8 +48,14 @@ export class CsrComponent implements OnInit {
     });
   }*/
 
+  BannerUrl:any;
 
   ngOnInit(): void {
+
+    this.db.getBannersCSR().subscribe((data: any) => {
+      this.BannerUrl = data.ImageUrl;
+      console.log(data)
+    });
 
     //this.convertPdfToImg('../../assets/CSR PDFs/CompaniesAct2013.pdf')
 

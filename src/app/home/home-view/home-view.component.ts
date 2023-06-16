@@ -24,6 +24,8 @@ export class HomeViewComponent implements OnInit {
 
   constructor(private db: DbService, private firestore: AngularFirestore) { }
 
+  upcomingEventPic:any;
+
   // Rolling Numbers
   pickANumber = 500;
   endVal = 1000;
@@ -66,6 +68,8 @@ export class HomeViewComponent implements OnInit {
 
   homePageSlideshow:any;
 
+////////////////////////////////////////////////////////////////////
+
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin, listPlugin],
@@ -92,7 +96,7 @@ export class HomeViewComponent implements OnInit {
   country: any;
   number1: any = 0;
   statesData: any;
-
+  partners:any;
 
 
   cross() {
@@ -105,10 +109,65 @@ export class HomeViewComponent implements OnInit {
 
   ngOnInit(): void {
 
+    this.db.getPartners().subscribe(data=>{
+      this.partners = data;
+    })
+
+
+    this.db.getUpcomingEventPic().subscribe((data:any)=>{
+      this.upcomingEventPic = data[0];
+    })
+
     this.db.getRollingNumbers().subscribe((data:any)=>{
       this.endVal = data[0].Beneficiaries;
       this.endVal2 = data[0].Members;
     })
+
+
+    const visionCard = new IntersectionObserver(entries => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+          // Add the animation class
+          entry.target.classList.add('fadeinAnimationClass');
+        }
+      });
+    });
+
+    visionCard.observe(document.querySelector('.visionCard')!);
+
+    const goalCard = new IntersectionObserver(entries => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+          // Add the animation class
+          entry.target.classList.add('fadeinAnimationClass2');
+        }
+      });
+    });
+
+    goalCard.observe(document.querySelector('.goalCard')!);
+
+    const missionCard = new IntersectionObserver(entries => {
+      // Loop over the entries
+      entries.forEach(entry => {
+        // If the element is visible
+        if (entry.isIntersecting) {
+          // Add the animation class
+          entry.target.classList.add('fadeinAnimationClass3');
+        }
+      });
+    });
+
+    missionCard.observe(document.querySelector('.missionCard')!);
+
+    
+
+
+
+    
 
 
     /* let states = [
@@ -320,7 +379,14 @@ export class HomeViewComponent implements OnInit {
 
 
     this.db.getCalenderEvents().subscribe((data: any) => {
+      data.sort(function(a:any,b:any){
+        // Turn your strings into dates, and then subtract them
+        // to get a value that is either negative, positive, or zero.
+        return  new Date(a.date).valueOf() - new Date(b.date).valueOf();
+      });
+
       this.EventsData = data;
+      
       this.calendarOptions.events = data;
     })
 

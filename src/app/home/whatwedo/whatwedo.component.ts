@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbService } from '../../Services/db.service';
 
 @Component({
   selector: 'app-whatwedo',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhatwedoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DbService) { }
+
+  BannerUrl:any;
 
   ngOnInit(): void {
+
+    this.db.getBannersWhatWeDo().subscribe((data:any)=>{
+      this.BannerUrl = data.ImageUrl;
+      console.log(data)
+    });
+
   }
 
 }

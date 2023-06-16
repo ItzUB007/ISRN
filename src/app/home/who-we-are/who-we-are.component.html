@@ -1,5 +1,5 @@
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../../../assets/images/whowearebg.JPG');"
-    data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url({{BannerUrl}});"
+     >
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -13,7 +13,7 @@
     </div>
 </section>
 
-<section class="ftco-section" id="about-section">
+<section class="ftco-section" id="about-section" id="aboutscroll">
     <div class="container">
         <div class="row">
             <div class="col-md-6 d-flex align-items-stretch">
@@ -49,12 +49,37 @@
     </div>
 </section>
 
-<section class="ftco-section VisionMission" id="about-section">
+<div class="twelve">
+    <h1>THE 17 SDG GOALS</h1>
+  </div>
+
+<section class="sdgs container">
+    <img src="../../../assets//images/SDGs/1.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/2.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/3.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/4.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/5.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/6.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/7.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/8.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/9.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/10.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/11.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/12.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/13.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/14.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/15.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/16.jpg" alt="sdg">
+    <img src="../../../assets//images/SDGs/17.jpg" alt="sdg">
+
+</section>
+
+<section class="ftco-section VisionMission" id="about-section" id="VisionMission">
     <div class="container">
-        <div class="row">
+        <div class="row" style="text-align: center">
             <div class="col-md-6 d-flex align-items-stretch vision">
-                <div class="row justify-content-center mb-4 pt-md-4">
-                    <div class="col-md-12 heading-section">
+                <div class="row justify-content-center mb-4 pt-md-4" >
+                    <div class="col-md-12 heading-section" >
                         <h2 class="mb-4"> Vision</h2>
                         <!--<div class="d-flex about">
                             <h3>We're in this business since 1975 and We provide the best insdustrial services</h3>
@@ -87,7 +112,7 @@
 </section>
 
 
-<section class="text-center about">
+<section class="text-center about" id="goalscroll"> 
     <h1>Goals</h1>
     <div class="container">
         <div class="row">
@@ -115,7 +140,7 @@
     </div>
 </section>
 
-<section class="ftco-section bg-half-light">
+<section class="ftco-section bg-half-light" id="allBoardsScroll">
     <div class="container">
         <!--<div class="row justify-content-center mb-5 pb-2">
             <div class="col-md-8 text-center heading-section   ">
@@ -208,7 +233,7 @@
 
 
 
-            <!--------------------------Meet our team------------------------------------------->
+            <!--------------------------Meet our team and Interns------------------------------------------->
 
             <div class="meetourteam hide">
 
@@ -219,6 +244,35 @@
                 
 
                     <div class="wrap animate pop" *ngFor="let member of this.MeetOurTeamMember">
+                        <div class="overlay">
+                            <div class="overlay-content animate slide-left delay-2">
+                                <h1 class="animate slide-left pop delay-4">{{member.Name}}</h1>
+                                <p class="animate slide-left pop delay-5" style="color: white; margin-bottom: 2.5rem;">{{member.Designation}}</p>
+                            </div>
+                            <div class="image-content animate slide delay-5"><img
+                                    [src]="member.ImageLink" alt=""></div>
+                            <div class="dots animate">
+                                <div class="dot animate slide-up delay-6"></div>
+                                <div class="dot animate slide-up delay-7"></div>
+                                <div class="dot animate slide-up delay-8"></div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p>{{member.Content}}</p>
+                        </div>
+                    </div>
+
+
+
+            </div>
+
+            <h1 style="text-align: center; font-weight: 700;">Interns</h1>
+
+                <div class="people"> 
+
+                
+
+                    <div class="wrap animate pop" *ngFor="let member of this.interns">
                         <div class="overlay">
                             <div class="overlay-content animate slide-left delay-2">
                                 <h1 class="animate slide-left pop delay-4">{{member.Name}}</h1>

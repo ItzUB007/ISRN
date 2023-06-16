@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbService } from '../../Services/db.service';
 
 @Component({
   selector: 'app-ngoclinic',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NGOClinicComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DbService) { }
+
+  slider1: any;
 
   ngOnInit(): void {
+
+    this.db.getNGOClinicSlider().subscribe((data: any) => {
+      this.slider1 = data;
+    })
+
   }
 
 }

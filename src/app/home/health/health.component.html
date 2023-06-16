@@ -1,5 +1,5 @@
 <section class="hero-wrap hero-wrap-2" style="background-image: url('../../../assets/images/health2.jpg');"
-    data-stellar-background-ratio="0.5">
+     >
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -14,14 +14,12 @@
     </div>
 </section>
 
-
-
-<section class="ftco-section bg-half-light">
+<section class="ftco-section bg-half-light" id="mritescroll">
     <div class="container">
         <div class="row justify-content-center pb-2">
             <div class="col-md-8 text-center heading-section">
-                <!--<span class="subheading">Market</span>-->
-                <h2 class="mb-4">M-RITE</h2>
+                <span class="subheading">M-RITE</span>
+                <h2 class="mb-4">Project</h2>
             </div>
         </div>
         <p style="text-align: left;">ISRN is amplifying the government COVID-19 vaccination drive in the northeastern
@@ -53,10 +51,37 @@
         <p style="text-align: left;">ISRN has vaccinated over 1,65,000 people till date and sensitised more than 2 lakh
             people across the 2 states.</p>
 
+        <div class="row">
+
+            <div id="carouselExample" class="carousel slide" >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../../../assets/images/AgricultureSlider1Default.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" *ngFor="let item of slider1">
+                    <img [src]="item.PicLink" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-half-light" id="chcScroll">
+    <div class="container">
         <div class="row justify-content-center pb-2">
             <div class="col-md-8 text-center heading-section">
-                <!--<span class="subheading">Market</span>-->
-                <h2 class="mb-4 pt-4">CHC/ PHC Solar Project</h2>
+                <span class="subheading">CHC/ PHC</span>
+                <h2 class="mb-4">Solar Project</h2>
             </div>
         </div>
         <p style="text-align: left;">Lightening up the Lives! - In India, Primary Health Centers (PHCs) and Community
@@ -81,16 +106,36 @@
 
 
         <div class="row">
+
+            <div id="carouselExample" class="carousel slide" >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../../../assets/images/AgricultureSlider1Default.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" *ngFor="let item of slider2">
+                    <img [src]="item.PicLink" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
         </div>
     </div>
 </section>
 
-<section class="ftco-section bg-half-light" style="margin-top: 0; padding-top: 0;">
+<section class="ftco-section bg-half-light" id="mhuScroll" style="margin-top: 0; padding-top: 0;">
     <div class="container">
         <div class="row justify-content-center pb-2">
             <div class="col-md-8 text-center heading-section">
-                <!--<span class="subheading">Market</span>-->
-                <h2 class="mb-4">Mobile Health Unit</h2>
+                <span class="subheading">Mobile Health</span>
+                <h2 class="mb-4">Unit</h2>
             </div>
         </div>
         <p style="text-align: left;">The Mobile Health unit, the core of the project “स्वस्थ बस्ती, स्वस्थ शहर” is a mini hospital on wheels 
@@ -105,24 +150,68 @@
             treatment etc. The project started in 2018 and interventions made by the project have tremendously improved the health 
             condition of the community in a short period.
         </p>
-
-
-
         <div class="row">
-            <div class="row justify-content-center pb-2">
-                <div class="col-md-8 text-center heading-section">
-                    <!--<span class="subheading">Market</span>-->
-                    <h2 class="mb-4">Health Check-Up Camps</h2>
+
+            <div id="carouselExample" class="carousel slide" >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../../../assets/images/AgricultureSlider1Default.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" *ngFor="let item of slider3">
+                    <img [src]="item.PicLink" class="d-block w-100" alt="...">
+                  </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-half-light" style="margin-top: 0; padding-top: 0;">
+    <div class="container">
+        <div class="row justify-content-center pb-2">
+            <div class="col-md-8 text-center heading-section">
+                <span class="subheading">Health Check-Up</span>
+                <h2 class="mb-4">Camps</h2>
             </div>
-            <p style="text-align: left;">As part of the CSR initiative of Power Grid Corporation of India Limited (PGCIL) health 
-                check-up camps were held at 95 locations across various states for the general public/ villagers. On behalf of 
-                PHDRDF, 14 of these health check camps were facilitated by ISRN and organised by its members in 14 locations across 
-                the states of Karnataka, Bihar, Chhattisgarh, Manipur and Himachal Pradesh.  During these camps eye check-up & 
-                pathological tests were also conducted in addition to providing free medicines to the villagers. Talks explaining 
-                the importance of cleanliness were also delivered during these camps. The camps facilitated by ISRN in 14 locations 
-                benefited more than 4000 persons.
-            </p>
+        </div>
+        <p style="text-align: left;">As part of the CSR initiative of Power Grid Corporation of India Limited (PGCIL) health 
+            check-up camps were held at 95 locations across various states for the general public/ villagers. On behalf of 
+            PHDRDF, 14 of these health check camps were facilitated by ISRN and organised by its members in 14 locations across 
+            the states of Karnataka, Bihar, Chhattisgarh, Manipur and Himachal Pradesh.  During these camps eye check-up & 
+            pathological tests were also conducted in addition to providing free medicines to the villagers. Talks explaining 
+            the importance of cleanliness were also delivered during these camps. The camps facilitated by ISRN in 14 locations 
+            benefited more than 4000 persons.
+        </p>
+        <div class="row">
+
+            <div id="carouselExample" class="carousel slide" >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../../../assets/images/AgricultureSlider1Default.jpeg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item" *ngFor="let item of slider4">
+                    <img [src]="item.PicLink" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
         </div>
     </div>
 </section>

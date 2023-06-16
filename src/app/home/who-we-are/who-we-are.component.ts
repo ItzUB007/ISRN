@@ -8,7 +8,8 @@ import { DbService } from '../../Services/db.service';
 })
 export class WhoWeAreComponent implements OnInit {
 
-  constructor(private db:DbService) { }
+  constructor(public db:DbService) { 
+   }
 
   governing: any;
   advisory:any;
@@ -16,6 +17,9 @@ export class WhoWeAreComponent implements OnInit {
   governBoardMember:any;
   advisoryBoardMamber:any;
   MeetOurTeamMember:any;
+  interns:any;
+
+  BannerUrl:any
 
 
   getGoverning(){ 
@@ -39,6 +43,11 @@ export class WhoWeAreComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.db.getBannersWhoWeAre().subscribe((data:any)=>{
+      this.BannerUrl = data.ImageUrl;
+      console.log(data)
+    });
 
     this.governing = document.querySelector('.governing');
     this.advisory = document.querySelector('.advisory');
@@ -65,6 +74,12 @@ export class WhoWeAreComponent implements OnInit {
       this.MeetOurTeamMember = data;
     })
 
+    this.db.getInterns().subscribe((data:any)=>{
+      data.sort((a:any,b:any)=>{
+        return a.Position - b.Position;
+      })
+      this.interns = data;
+    })
 
     
   }

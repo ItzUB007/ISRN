@@ -9,6 +9,8 @@ import { AuthService } from './auth.service'
 })
 export class DbService {
 
+  banners:any;
+
   constructor(private firestore: AngularFirestore, private authService: AuthService) { }
 
   getGoverningBoard() {
@@ -27,6 +29,12 @@ export class DbService {
     return this.firestore
       .collection('MeetOurTeam')
       .valueChanges();
+  }
+
+  getInterns(){
+    return this.firestore
+    .collection("Interns")
+    .valueChanges();
   }
 
   getTrainingPrograms() {
@@ -133,5 +141,160 @@ export class DbService {
     .collection('AgricultureSlider2')
     .valueChanges();
   }
+
+  getHealthSlider(){
+    return this.firestore
+    .collection('HealthSlider')
+    .valueChanges();
+  }
+
+  getHealthSlider2(){
+    return this.firestore
+    .collection('HealthSlider2')
+    .valueChanges();
+  }
+
+  getHealthSlider3(){
+    return this.firestore
+    .collection('HealthSlider3')
+    .valueChanges();
+  }
+
+  getHealthSlider4(){
+    return this.firestore
+    .collection('HealthSlider4')
+    .valueChanges();
+  }
+  getNGOClinicSlider(){
+    return this.firestore
+    .collection('NGOClinicSlider')
+    .valueChanges();
+  }
+
+  getUpcomingEventPic(){
+    return this.firestore
+    .collection('UpcomingEventPic')
+    .valueChanges();
+  }
+
+  getBannersWhatWeDo(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('WhatWeDo')
+    .valueChanges();
+  }
+
+  getBannersPublications(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('Publications')
+    .valueChanges();
+  }
+
+  getBannersWhoWeAre(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('WhoweAre')
+    .valueChanges();
+  }
+
+  getBannersMrite(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('Mrite')
+    .valueChanges();
+  }
+
+  getBannersMembership(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('Membership')
+    .valueChanges();
+  }
+
+  getBannersISRNInitiatives(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('ISRNInitiatives')
+    .valueChanges();
+  }
+
+  getBannersGetInvolved(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('GetInvolved')
+    .valueChanges();
+  }
+
+  getBannersCovid19(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('Covid19')
+    .valueChanges();
+  }
+
+  getBannersContactUs(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('ContactUs')
+    .valueChanges();
+  }
+
+  getBannersCSR(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('CSR')
+    .valueChanges();
+  }
+
+  getBannersC20(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('C20')
+    .valueChanges();
+  }
+
+  getBannersBlogs(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('Blogs')
+    .valueChanges();
+  }
+
+  getBannersAntyodaya(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('Antyodaya')
+    .valueChanges();
+  }
+
+  getBannersDonate(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('Donate')
+    .valueChanges();
+  }
+
+  getBannersFPIPV(){
+    return this.firestore
+    .collection('MainBanners')
+    .doc('FP-IPV')
+    .valueChanges();
+  }
+
+  getPartners(){
+    return this.firestore
+    .collection('Partners')
+    .valueChanges();
+  }
+
+  getFPIPVGallery(){
+    return this.firestore
+    .collection('FP-IPV Gallery')
+    .valueChanges();
+  }
+
+
+  
 
 }

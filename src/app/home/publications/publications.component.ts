@@ -73,17 +73,31 @@ export class PublicationsComponent implements OnInit {
 
   ]
 
+  hasMembership:any;
+
+  BannerUrl:any;
+
   ngOnInit(): void {
 
     //this.pdfViewerDiv = document.querySelectorAll('.pdf-container');
-
+    this.db.getBannersPublications().subscribe((data:any)=>{
+      this.BannerUrl = data.ImageUrl;
+      console.log(data)
+    });
 
     //console.log(JSON.parse(localStorage.getItem('user')!));
+    console.log(localStorage.getItem('user'))
+
+    if(this.authService.userData){
+      console.log('chala')
     let uid = JSON.parse(localStorage.getItem('user')!).uid;
 
-      this.db.getUserByUid(uid).subscribe(data=>{
-        this.user = data;
-      })
+    this.db.getUserByUid(uid).subscribe((data:any)=>{
+      this.user = data;
+      this.hasMembership = data[0].hasMembership;
+    })
+    }
+      
     
 
     this.db.getAnnualReports().subscribe((data:any)=>{
@@ -133,7 +147,7 @@ export class PublicationsComponent implements OnInit {
     source.currentPage = event?.pageNumber;
     console.log(source.currentPage)
     console.log(index)
-    if (source.currentPage > 3 && !this.user[0].hasMembership) {
+    if (source.currentPage > 3 && !this.hasMembership) {
       // display a prompt to log in
       this.pdfViewerDiv[index].classList.add('blur')
       this.maxPages = 3;

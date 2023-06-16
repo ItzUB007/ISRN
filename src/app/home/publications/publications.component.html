@@ -1,5 +1,5 @@
-<section class="hero-wrap hero-wrap-2" style="background-image: url('../../../assets/images/PublicationsBg.jpg');"
-  data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url({{BannerUrl}});"
+   >
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -28,19 +28,22 @@
         </p>-->
     <div class="row">
 
+
+      
+      <!--(pagechanging)="onPageChange($event, item, i)"--->
+
       <div class="Allpdfs">
         
           <div *ngFor="let item of this.pdfsAnnual; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
-                <div *ngIf="!this.user[0].hasMembership && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                <!--<div *ngIf="!hasMembership && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
                   <div class="login-prompt-bg"></div>
                   <p>Please log in to view more than 3 pages.</p> 
-                </div>
+                </div>-->
                 <div class="pdf-container">
                   <pdf-viewer
                     [src]="item.PDFLink"
                     [page]="1"
                     [show-all]="true"
-                    (pagechanging)="onPageChange($event, item, i)"
                     (after-load-complete)="onFileLoadComplete($event)"
                     [rotation]="0"
                     [original-size]="false"
@@ -55,6 +58,7 @@
                     style="width: 100%; height: 450px;"
                   ></pdf-viewer>
                 </div>
+                <a [href]="item.PDFLink" target="_blank" attributes-list download ="optional-value" >Download Now</a>  
           </div>
 
       </div>
@@ -76,18 +80,19 @@
         </p>-->
     <div class="row">
 
+<!--(pagechanging)="onPageChange($event, item, i+this.pdfsAnnual.length)"-->
+
       <div class="Allpdfs">
           <div *ngFor="let item of this.newsletter; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
-                <div *ngIf="!this.user[0].hasMembership && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                <!--<div *ngIf="!hasMembership && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
                   <div class="login-prompt-bg"></div>
                   <p>Please log in to view more than 3 pages.</p> 
-                </div>
+                </div>-->
                 <div class="pdf-container">
                   <pdf-viewer
                     [src]="item.PDFLink"
                     [page]="1"
                     [show-all]="true"
-                    (pagechanging)="onPageChange($event, item, i+this.pdfsAnnual.length)"
                     (after-load-complete)="onFileLoadComplete($event)"
                     [rotation]="0"
                     [original-size]="false"
@@ -102,6 +107,7 @@
                     style="width: 100%; height: 450px;"
                   ></pdf-viewer>
                 </div>
+                <a [href]="item.PDFLink" target="_blank" attributes-list download ="optional-value" >Download Now</a>  
           </div>
 
       </div>
@@ -125,7 +131,7 @@
 
       <div class="Allpdfs">
           <div *ngFor="let item of this.condenium; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
-                <div *ngIf="!this.user[0].hasMembership && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+                <div *ngIf="!hasMembership && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
                   <div class="login-prompt-bg"></div>
                   <p>Please log in to view more than 3 pages.</p> 
                 </div>

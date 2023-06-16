@@ -21,6 +21,9 @@ export class AntyodayaComponent implements OnInit {
 
   constructor(public authService: AuthService, private db:DbService) { }
 
+  
+  BannerUrl:any;
+
   ngOnInit(): void {
 
     this.db.getAntyodayaBooks().subscribe((data)=>{
@@ -31,6 +34,14 @@ export class AntyodayaComponent implements OnInit {
       console.log(this.antyodayaBooks);
 
     })
+
+    this.db.getBannersAntyodaya().subscribe((data: any) => {
+      this.BannerUrl = data.ImageUrl;
+      console.log(data)
+    });
+
+    
+
 
   }
 

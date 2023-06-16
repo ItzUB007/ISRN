@@ -376,6 +376,7 @@ h1, h2, h3, h4, h5,
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top center;
+	background-attachment: fixed;
 	@include media-breakpoint-down(md){
 		background-position: left center !important;
 	}

@@ -1,0 +1,89 @@
+<section class="hero-wrap hero-wrap-2" style="background-image: url({{mainBanner}});">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-start">
+            <div class="col-md-9 pb-5">
+                <p class="breadcrumbs"><span class="mr-2"><a href="">Home <i class="fa fa-chevron-right"></i></a></span>
+                    <span> SHOPS PLUS FP-IPV Campaign <i class="fa fa-chevron-right"></i></span>
+                </p>
+                <h1 class="mb-3 bread">SHOPS PLUS FP-IPV Campaign</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="text-center about about2">
+    <!--<h1>Uttam School</h1>-->
+    <div class="container">
+        <div class="row" style="margin-top: 50px;">
+            <p><b>This project focussed on the rights of women where ISRN supported this need in collaboration with
+                    SHOPS
+                    plus, Abt Association, and USAID.</b>
+                <br>
+            </p>
+            <hr>
+            <p>
+                For years, scholars have been examining how power, oppression, and control are contested through
+                patriarchal systems within the domestic domain and family. In India, the feminist movement has
+                experienced strong political and social movements aimed at combating gendered violence that occurs
+                within the family, particularly in the context of domestic violence. In today’s time, India is home to
+                16% of the world's female population and shockingly, a report by IIPS & ICF (2017) reveals that 31% of
+                women in India have faced physical or sexual violence at the hands of their intimate partners. This form
+                of violence, defined by the World Health Organization as intimate partner violence, is a pervasive
+                problem that encompasses physical, sexual, and emotional abuse, as well as controlling behaviours
+                perpetrated by an intimate partner. These alarming statistics serve as a stark reminder of the urgent
+                need to address this issue and work towards creating a safer environment for women in India.
+                <br>
+            </p>
+            <hr>
+            <p>
+                With the onset of the COVID-19 pandemic, women worldwide, including those in India, had faced
+                increasingly severe challenges. One of the most alarming increases was the surge in domestic violence,
+                with a staggering 1,477 complaints recorded in the first lockdown of March 25th - May 31st, 2020 - more
+                than in the preceding decade during the same period. The lockdowns and restrictions meant that homes
+                became hotspots for violence against women, especially for intimate partner violence. Sadly, such cases
+                often go unreported, leaving women vulnerable and deprived of their human rights, health, dignity, and
+                safety.
+                <br>
+            </p>
+            <hr>
+            <p>
+                The Indian Social Responsibility Network, in partnership with USAID, in March & April 2021 embarked on a
+                mission to combat the grave issue of intimate partner violence and its negative impact on family
+                planning. Their objective was to create awareness among the masses and impart knowledge about IPV to
+                remove any obstacles that may hinder access to family planning methods. The campaign also popularized a
+                helpline for counseling, which was made available to the public. The impact of their efforts was
+                significant as they trained over 650 officials, NGO officials, ASHA, AWW, outreach workers, volunteers,
+                and organizations on the issue.
+                <br>
+            </p>
+            <hr>
+            <p>
+                The ISRN also reached out to over 18,000 people in Delhi and more than 10,500 in other states through
+                their outreach programs. Their social media campaign on FP-IPV had a staggering reach of over 248,320
+                people, and as a result five media houses covered their efforts. The FP-IPV Campaign aimed to empower
+                women to break the silence on intimate partner violence, build their trust in the Helpline number, and
+                provide them with quality family planning information and counselling support. Moreover, to help women
+                make informed decisions regarding contraceptive methods, let's stand with ISRN to break the silence on
+                IPV and empower them to ultimately take charge of their lives
+                <br>
+            </p>
+            <hr>
+        </div>
+        <!---lg-3 col-sm-6 col-ex-12-->
+    </div>
+</section>
+
+<div id="app" data-state="gallery">
+    <div class="gallery">
+        <!--
+figure.gallery-image*30>img[src="https://source.unsplash.com/collection/2022043/700x900/?=$$"]+figcaption -->
+        <figure class="gallery-image" *ngFor="let link of Gallery, let i = index">
+            <img [src]="link.ImageLink" width="800" height="auto" />
+            <figcaption>{{i}}</figcaption>
+        </figure>
+    </div>
+    <div class="detail">
+        <!--   cloned figure/image goes here!   -->
+    </div>
+</div>

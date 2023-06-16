@@ -38,13 +38,19 @@ export class NewlettersComponent implements OnInit {
 
   ]
 
+  hasMembership:any;
+
   ngOnInit(): void {
 
+    if(this.authService.userData){
+      console.log('chala')
     let uid = JSON.parse(localStorage.getItem('user')!).uid;
 
-      this.db.getUserByUid(uid).subscribe(data=>{
-        this.user = data;
-      })
+    this.db.getUserByUid(uid).subscribe((data:any)=>{
+      this.user = data;
+      this.hasMembership = data[0].hasMembership;
+    })
+    }
 
     
 

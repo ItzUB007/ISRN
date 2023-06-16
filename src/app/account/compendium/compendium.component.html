@@ -4,7 +4,7 @@
 <div class="Allpdfs">
         
     <div *ngFor="let item of this.conpendium; let i = index" class="pdf-viewer align-items-center justify-content-center p-0">
-          <div *ngIf="!this.user[0].hasMembership && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
+          <div *ngIf="!hasMembership && item.currentPage > 3" class="login-prompt align-items-center justify-content-center">
             <div class="login-prompt-bg"></div>
             <p>Please log in to view more than 3 pages.</p> 
           </div>

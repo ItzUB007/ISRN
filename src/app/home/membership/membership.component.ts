@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DbService } from '../../Services/db.service';
 
 @Component({
   selector: 'app-membership',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MembershipComponent implements OnInit {
 
-  constructor() { }
+  constructor(private db: DbService) { }
+
+  BannerUrl: any
 
   ngOnInit(): void {
+
+    this.db.getBannersMembership().subscribe((data: any) => {
+      this.BannerUrl = data.ImageUrl;
+      console.log(data)
+    });
+
   }
 
 }

@@ -914,13 +914,17 @@ $black: #282936;
 
 ///////////////////////////////////////////////
 
+
 .wwd_first {
     margin-top: 5vh;
+    clip-path: polygon(87.71% 98%, 100% 89.71%, 100% 0%, 70.71% 0%, 29.29% 0%, 0% 0%, 0% 92.46%, 29.29% 86.09%);
     background-image:
     radial-gradient(
       rgba(0, 0, 0, 0.144),
       rgb(0, 0, 0)), url(
 '../../../assets/images/aboutPic.jpg');
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -947,7 +951,7 @@ $black: #282936;
     }
 }
 .mission{
-    background-color: rgb(37, 37, 37);
+    background-color: var(--red);
     color: white;
     h2{
         color: white;
